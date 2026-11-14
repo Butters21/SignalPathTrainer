@@ -6,6 +6,8 @@
 <link rel="apple-touch-icon" href="icons/icon-180.png">
 <link rel="icon" type="image/png" href="icons/icon-192.png">
 <meta name="apple-mobile-web-app-title" content="Signal Path">
+<meta name="spt-build" content="20261114-1258">
+<meta name="theme-color" content="#111418">
 <style>[hidden]{display:none!important}body{margin:0}</style>
 </head><body>
 <title>Signal Path Trainer</title>
@@ -367,7 +369,7 @@ html{-webkit-text-size-adjust:100%}
 .wrap{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
 .standalone .appbar{padding-top:max(14px,env(safe-area-inset-top))}
 .ts-pick{display:flex;gap:4px}
-.narrow .appbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 10px;padding-block:10px 8px}.narrow .appbar .brand{grid-column:1/-1}.narrow .con-pick{min-width:0}.narrow .con-pick select{width:100%;min-width:0}.narrow .ts-pick button{min-height:44px}.ts-pick button{min-width:40px;min-height:36px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer;font-family:var(--display)}
+.narrow .appbar{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px 10px;padding-block:10px 8px}.narrow .appbar .brand{grid-column:1/-1}.narrow .con-pick{min-width:0}.narrow .con-pick select{width:100%;min-width:0}.narrow .ts-pick button{min-height:44px}.ts-pick button{min-width:40px;min-height:36px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer;font-family:var(--display)}
 /* iPhone and narrow touch screens: bottom tab bar */
 .dev-iphone nav .primary,.dev-phone nav .primary,.touch.narrow nav .primary{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding:4px 4px calc(4px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);border-bottom:0}
 .dev-iphone .pnav,.dev-phone .pnav,.touch.narrow .pnav{flex-direction:column;gap:3px;padding:7px 2px 5px;font-size:.68rem;border-bottom:0;border-top:2px solid transparent;min-height:50px;justify-content:center}
@@ -394,7 +396,7 @@ nav.secnav{position:static;z-index:auto;margin-bottom:0;padding-block:14px;borde
 .sf-t{border-collapse:collapse;width:100%;min-width:560px;margin:10px 0}.sf-t th,.sf-t td{border:1px solid var(--line);padding:7px 9px;text-align:left;font-size:.88rem;vertical-align:top}.sf-t th{background:var(--panel2)}
 .sf-calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}.sf-calc select{width:100%}
 .sf-row{display:grid;grid-template-columns:64px 1fr 52px auto;gap:10px;align-items:center;margin:8px 0}.sf-bar{position:relative;height:14px;background:var(--panel2);border-radius:7px;overflow:hidden}.sf-bar i{position:absolute;inset:0 auto 0 0;border-radius:7px}.sf-bar i.ok{background:var(--ok)}.sf-bar i.warn{background:var(--warn)}.sf-bar i.bad{background:var(--bad)}.sf-bar b{position:absolute;top:0;bottom:0;width:2px;background:var(--fg)}
-.sf-verdict{font-weight:700;padding:8px 12px;border-radius:6px;border:1px solid var(--line)}.sf-verdict.ok{color:var(--ok)}.sf-verdict.warn{color:var(--warn)}.sf-verdict.bad{color:#ff8a82}
+.sf-verdict{font-weight:700;padding:8px 12px;border-radius:6px;border:1px solid var(--line)}.sf-verdict.ok{color:var(--ok)}.sf-verdict.warn{color:var(--warn)}.sf-verdict.bad{color:#ff8a82}:root.is-light .sf-verdict.bad{color:var(--bad)}
 .ld-items{display:grid;gap:6px;max-width:560px}.ld-row{display:grid;grid-template-columns:1fr 100px 80px;gap:8px;align-items:center}.ld-h{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.ld-row input{width:100%}
 @media(max-width:520px){.sf-row{grid-template-columns:52px 1fr 44px}.sf-row .note{grid-column:1/-1}}
 .eq-shapes{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:12px 0}.eq-shape{margin:0;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px}.eq-shape svg{width:100%;height:auto;display:block}.eq-shape figcaption{display:grid;gap:3px;font-size:.84rem}.eq-shape figcaption span{color:var(--muted)}
@@ -511,7 +513,7 @@ table.cmp th.sel{color:var(--accent)}
 
 /* ---- hear it ---- */
 .warnbar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;background:color-mix(in srgb,var(--warn) 10%,var(--panel));border:1px solid color-mix(in srgb,var(--warn) 40%,var(--line));border-radius:6px;padding:12px 16px}
-.warnbar .ctl{flex:1 1 220px}
+.warnbar .ctl{flex:1 1 220px}:root.is-light .bd-rt button.on.lr{color:#fff}:root.is-light .warnbar .mono{color:var(--fg)}
 .demo-grid{display:grid;grid-template-columns:minmax(0,250px) minmax(0,1fr);gap:22px;align-items:start}
 .demo-grid > *{min-width:0}
 .dlist{display:grid;gap:6px}
@@ -750,7 +752,7 @@ svg .led.lit{fill:var(--ok);stroke:var(--ok)}
 .btnrow{display:flex;gap:4px;justify-content:center}
 .dbtn{flex:1;font-family:var(--mono);font-size:.62rem;letter-spacing:.03em;padding:4px 2px;border-radius:3px;border:1px solid var(--line);background:var(--meter-off);color:var(--muted);cursor:pointer}
 .dbtn:hover{border-color:var(--muted)}
-.dbtn.on.p48{background:var(--bad);color:#fff;border-color:var(--bad)}
+.dbtn.on.p48{background:var(--bad);color:#1b1408;border-color:var(--bad)}
 .dbtn.on.mute{background:var(--bad);color:#fff;border-color:var(--bad)}
 .dbtn.on.pfl{background:var(--warn);color:var(--accent-ink);border-color:var(--warn)}
 .dbtn.on.lr,.dbtn.on.hpf,.dbtn.on.pad{background:var(--ok);color:var(--accent-ink);border-color:var(--ok)}
@@ -1114,12 +1116,122 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
   h1{font-size:1.6rem}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ===== Themes: Night console (dark, default) and Studio (light) ===== */
+:root{--bg:#111418;--panel:#1a1e23;--panel2:#23282e;--line:#323942;--fg:#e8e5de;--muted:#9da4ac;--route:#6fb3ff;--logo-path:#6fb3ff;--logo-dot:#f0a43a;--hero-card:#1d2228;--hero-ink:#e8e5de;--soft-learn:#17232f;--soft-practice:#2a2016;--soft-test:#152820}
+:root[data-theme="light"]{color-scheme:light;
+  --bg:#f6f3ee;--panel:#fffdf9;--panel2:#f1ece3;--line:#dbd2c4;--fg:#1b1d21;--muted:#585d65;
+  --accent:#b5530f;--accent-ink:#ffffff;--route:#1f5f99;--ok:#1d7a50;--warn:#8a6100;--bad:#b3302a;--meter-off:#e5dfd3;
+  --c-learn:#1f5f99;--c-practice:#b5530f;--c-control:#7d4a8c;--c-ref:#59636e;
+  --lane-mon:#1f6f9c;--lane-fx:#7d4a8c;--lane-grp:#1d7a6a;--lane-main:#b5530f;--lane-mtx:#7d6400;--lane-dca:#59636e;
+  --logo-path:#1f5f99;--logo-dot:#d9661f;--hero-card:#1b1d21;--hero-ink:#f6f3ee;--soft-learn:#e3edf6;--soft-practice:#f6e3d4;--soft-test:#e2efe6}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]):not([data-theme="light"]){color-scheme:light;
+  --bg:#f6f3ee;--panel:#fffdf9;--panel2:#f1ece3;--line:#dbd2c4;--fg:#1b1d21;--muted:#585d65;
+  --accent:#b5530f;--accent-ink:#ffffff;--route:#1f5f99;--ok:#1d7a50;--warn:#8a6100;--bad:#b3302a;--meter-off:#e5dfd3;
+  --c-learn:#1f5f99;--c-practice:#b5530f;--c-control:#7d4a8c;--c-ref:#59636e;
+  --lane-mon:#1f6f9c;--lane-fx:#7d4a8c;--lane-grp:#1d7a6a;--lane-main:#b5530f;--lane-mtx:#7d6400;--lane-dca:#59636e;
+  --logo-path:#1f5f99;--logo-dot:#d9661f;--hero-card:#1b1d21;--hero-ink:#f6f3ee;--soft-learn:#e3edf6;--soft-practice:#f6e3d4;--soft-test:#e2efe6}}
+/* hardware stays dark in the light theme, like a real desk */
+:root.is-light .console-wrap,:root.is-light .r2-stage,:root.is-light .mx-desk,:root.is-light .bd-desk,:root.is-light .r2-path,:root.is-light #v-desk .proc,:root.is-light .rstage{
+  --bg:#111418;--panel:#1a1e23;--panel2:#23282e;--line:#323942;--fg:#e8e5de;--muted:#9da4ac;--accent:#f0a43a;--accent-ink:#1b1408;--route:#6fb3ff;--ok:#47c08a;--warn:#e6c44a;--bad:#e5544c;--meter-off:#141719;color:var(--fg)}
+:root.is-light .console-wrap,:root.is-light .r2-stage,:root.is-light .mx-desk,:root.is-light .bd-desk,:root.is-light .r2-path,:root.is-light #v-desk .proc{background:#15181c;border-radius:8px;padding:8px}
+/* logo */
+.brand .mark.pathmark{width:36px;height:36px}
+.pathmark .lp{fill:none;stroke:var(--logo-path);stroke-width:9;stroke-linecap:round}
+.pathmark .lc{fill:var(--bg);stroke:var(--logo-path);stroke-width:8}
+.pathmark .ld{fill:var(--logo-dot)}.pathmark .la{fill:var(--logo-path)}
+/* theme switch */
+.th-pick{display:flex;gap:4px}.th-pick button{min-width:40px;min-height:36px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer;padding:0 10px;font-size:.85rem}
+.th-pick button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.th-sm{display:none}.narrow .th-lg{display:none}.narrow .th-sm{display:inline}
+.narrow .th-pick button:not([aria-pressed="true"]){display:none}.narrow .th-pick button{min-height:44px;min-width:44px;box-shadow:none!important;border-color:var(--line)!important}
+
+
+/* ===== Studio home ===== */
+.studio{display:grid;gap:16px;margin:8px 0 28px}
+.st-top{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px}
+.st-cont{background:var(--hero-card);color:var(--hero-ink);border-radius:12px;padding:24px 26px;display:grid;gap:10px;align-content:center;border:1px solid var(--line);border-left:4px solid var(--logo-dot)}
+.st-cont .label{color:color-mix(in srgb,var(--hero-ink) 70%,transparent)}
+.st-cont h2{margin:0;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.2;color:var(--hero-ink)}
+.st-cont p{margin:0;color:color-mix(in srgb,var(--hero-ink) 82%,transparent);max-width:60ch}
+.st-cont .st-bar{height:6px;border-radius:3px;background:color-mix(in srgb,var(--hero-ink) 18%,transparent);overflow:hidden;max-width:360px}
+.st-cont .st-bar i{display:block;height:100%;background:var(--logo-dot)}
+.st-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.st-cont .btn:not(.primary){background:transparent;color:var(--hero-ink);border-color:color-mix(in srgb,var(--hero-ink) 35%,transparent)}
+.st-daily{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;gap:8px;align-content:start}
+.st-dh{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.st-daily h3{margin:0;font-size:1.1rem}
+.st-streak{font-family:var(--mono);font-size:.8rem;padding:3px 8px;border-radius:99px;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--fg);white-space:nowrap}
+.st-tasks{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.st-tasks button{width:100%;display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;text-align:left;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--fg);font:inherit;cursor:pointer;min-height:44px}
+.st-tasks button:hover{border-color:var(--accent)}
+.st-tasks .n{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--line);font-family:var(--mono);font-size:.8rem}
+.st-tasks .done .n{background:var(--ok);border-color:var(--ok);color:var(--bg)}
+.st-tasks .done .t{text-decoration:line-through;text-decoration-color:var(--muted);color:var(--muted)}
+.st-tasks .go{font-size:.8rem;color:var(--muted)}
+.st-skills{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.st-sh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:12px}.st-sh h3{margin:0}
+.st-rings{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+.st-ring{display:grid;justify-items:center;gap:6px;background:none;border:0;color:var(--fg);font:inherit;cursor:pointer;padding:6px 2px;border-radius:8px}
+.st-ring:hover{background:var(--panel2)}
+.st-ring .r{--p:0;width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--rc,var(--route)) calc(var(--p)*1%),var(--meter-off) 0);display:grid;place-items:center}
+.st-ring .r b{width:50px;height:50px;border-radius:50%;background:var(--panel);display:grid;place-items:center;font-family:var(--mono);font-size:.8rem;font-weight:600}
+.st-ring span{font-size:.85rem;text-align:center;line-height:1.2}
+.st-entry{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.st-card{display:grid;gap:6px;align-content:start;text-align:left;border:1px solid var(--line);border-radius:12px;padding:18px;cursor:pointer;color:var(--fg);font:inherit;min-height:150px}
+.st-card b{font-size:1.1rem}.st-card span:last-child{color:var(--muted)}
+.st-card:hover{border-color:var(--accent)}
+.st-learn{background:var(--soft-learn)}.st-learn .label{color:var(--c-learn)}
+.st-prac{background:var(--soft-practice)}.st-prac .label{color:var(--c-practice)}
+.st-test{background:var(--soft-test)}.st-test .label{color:var(--ok)}:root.is-light .st-prac .label{color:#8f3f08}:root.is-light .st-test .label{color:#14603e}
+.st-team{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;border:1px dashed var(--line);border-radius:12px;padding:14px 18px}
+.st-team div{display:grid;gap:2px}.st-team span{color:var(--muted)}
+.st-more{margin:8px 0 14px;font-size:.8rem}
+.narrow .st-top,.narrow .st-entry{grid-template-columns:1fr}
+.narrow .st-cont{padding:18px}
+.narrow .st-rings{grid-template-columns:repeat(4,minmax(0,1fr))}
+.narrow .st-ring .r{width:56px;height:56px}.narrow .st-ring .r b{width:44px;height:44px;font-size:.72rem}
+.narrow .st-entry{grid-template-columns:repeat(2,minmax(0,1fr))}.narrow .st-entry .st-test{grid-column:1/-1}
+.narrow .st-card{min-height:0;padding:14px}.narrow .st-card span:last-child{font-size:.85rem}
+@media (max-width:820px){.st-top{grid-template-columns:1fr}.st-entry{grid-template-columns:1fr}}
+
+/* ===== phone lesson pages: chips + sticky prev/next ===== */
+.subchips{display:none}
+.narrow .secnav .secnav-map,.narrow .secnav .mapl{display:none}
+.narrow .secnav{position:sticky;top:0;z-index:40;padding:8px 0;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:0;border-bottom:1px solid var(--line);border-radius:0;margin-inline:-16px;box-shadow:none}
+.narrow .subchips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:0 16px;scroll-behavior:smooth}
+.narrow .subchips::-webkit-scrollbar{display:none}
+.subchips button{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;border-radius:99px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font:inherit;font-size:.86rem;white-space:nowrap;cursor:pointer}
+.subchips button i{font-style:normal;font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.subchips button[aria-current="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.subchips button[aria-current="true"] i{color:var(--bg)}
+.subfoot .btn{display:inline-flex;gap:6px;align-items:center;max-width:100%}
+.dev-iphone .subfoot,.dev-phone .subfoot,.touch.narrow .subfoot{position:sticky;bottom:calc(64px + env(safe-area-inset-bottom));z-index:30;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line);margin-inline:-16px;padding:8px 16px;flex-wrap:nowrap}
+.dev-iphone .subfoot .btn,.dev-phone .subfoot .btn,.touch.narrow .subfoot .btn{min-height:44px;min-width:0;justify-content:center}
+.dev-iphone .subfoot .sf-t,.dev-phone .subfoot .sf-t,.touch.narrow .subfoot .sf-t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.dev-iphone .subfoot>.note,.dev-phone .subfoot>.note,.touch.narrow .subfoot>.note{display:none}.dev-iphone .subfoot,.dev-phone .subfoot,.touch.narrow .subfoot{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:8px}.narrow .st-cont h2{font-size:1.25rem}
+.dev-iphone .subfoot>.btn:last-child,.dev-phone .subfoot>.btn:last-child,.touch.narrow .subfoot>.btn:last-child{justify-self:end}
+.narrow .appbar .brand .mark{width:30px;height:30px}.narrow .appbar .brand b{font-size:1rem}.narrow .appbar .brand small{display:none}
+.st-fb{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:0}
+.st-fb summary{cursor:pointer;padding:14px 18px;display:grid;gap:2px;list-style:none}
+.st-fb summary::-webkit-details-marker{display:none}
+.st-fb summary b::after{content:" ▾";color:var(--muted)}.st-fb[open] summary b::after{content:" ▴"}
+.st-fb summary span{color:var(--muted)}
+.fb-body{padding:0 18px 18px;display:grid;gap:14px}
+.fb-body fieldset{border:0;margin:0;padding:0;display:grid;gap:8px}.fb-body legend{font-weight:600;margin-bottom:6px;padding:0}
+.fb-chips,.fb-scale{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.fb-chips label,.fb-scale label{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:99px;background:var(--panel2);cursor:pointer}
+.fb-scale label{min-width:40px;justify-content:center;padding:0 8px}
+.fb-chips input,.fb-scale input{position:absolute;opacity:0;pointer-events:none}
+.fb-chips label:has(input:checked),.fb-scale label:has(input:checked){background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.fb-chips label:has(input:focus-visible),.fb-scale label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.fb-body textarea{width:100%;box-sizing:border-box;background:var(--panel2);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit}
 </style>
 
 <div class="wrap">
 <header class="appbar">
   <a class="brand" href="#home" data-go="home" aria-label="Signal Path Trainer home">
-    <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9"/><path d="M8 26c3 0 3-12 6-12s3 16 6 16 3-20 6-20 3 10 6 10"/></svg>
+    <svg class="mark pathmark" viewBox="0 0 96 96" aria-hidden="true"><path class="lp" d="M22 22 H60 C78 22 78 48 60 48 H36 C18 48 18 74 36 74 H74"/><circle class="lc" cx="22" cy="22" r="8"/><circle class="ld" cx="48" cy="48" r="9"/><path class="la" d="M70 64 L84 74 L70 84 Z"/></svg>
     <span><b>Signal Path Trainer</b><small>Live sound foundations</small></span>
   </a>
   <div class="con-pick"><label class="label" for="console">Your console</label><select id="console"></select></div>
@@ -1133,6 +1245,52 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
 
 <!-- ================= HOME ================= -->
 <section class="view" id="v-home" hidden>
+  <div class="studio" id="hm-studio">
+    <div class="st-top">
+      <div class="st-cont" id="st-cont">
+        <div class="label" id="st-cont-l">Start here</div>
+        <h2 id="st-cont-h">Signal flow: the order a signal travels</h2>
+        <p id="st-cont-p">Every fault you'll ever fix starts with knowing where the signal goes next. Begin here, then try it on the rig.</p>
+        <div class="st-btns"><button class="btn primary" id="st-cont-go">Start learning</button><button class="btn" data-go="flow" id="st-cont-all">See all of Learn</button></div>
+      </div>
+      <div class="st-daily" id="st-daily">
+        <div class="st-dh"><span class="label">Today's soundcheck</span><span class="st-streak" id="st-streak"></span></div>
+        <h3>5 minutes. Three checks.</h3>
+        <ol class="st-tasks" id="st-tasks"></ol>
+        <p class="note" id="st-dnote">Do one a day to build a streak. Progress is saved in this browser.</p>
+      </div>
+    </div>
+    <div class="st-skills">
+      <div class="st-sh"><h3>Your skills</h3><span class="note" id="st-level"></span></div>
+      <div class="st-rings" id="st-rings"></div>
+    </div>
+    <div class="st-entry">
+      <button class="st-card st-learn" data-go="flow"><span class="label">Learn</span><b>12 topics, source to speaker</b><span>Signal flow, gain, EQ, dynamics, mics, monitors, patching, safety and more, each with something to try.</span></button>
+      <button class="st-card st-prac" data-go="desk"><span class="label">Practise</span><b>Fix a broken rig</b><span>24 faults on a live stage and desk. Trace the signal, probe it and fix it against the clock.</span></button>
+      <button class="st-card st-test" data-go="quiz"><span class="label">Test yourself</span><b>Quizzes and assessment</b><span>Over 150 questions, listening drills and a timed assessment your trainer can set.</span></button>
+    </div>
+    <div class="st-team">
+      <div><b>Training a team?</b><span>Send a pack of faults to your volunteers or students and get their results back as a code. No accounts needed.</span></div>
+      <button class="btn" data-go="teach">Open the instructor tools →</button>
+    </div>
+    <details class="st-fb" id="st-fb">
+      <summary><b>Help test this app</b><span>Tried it? Two minutes of feedback shapes what gets built next.</span></summary>
+      <div class="fb-body">
+        <fieldset><legend>Which best describes you?</legend><div class="fb-chips" data-q="role">
+          <label><input type="radio" name="fb-role" value="New or volunteer tech">New or volunteer tech</label><label><input type="radio" name="fb-role" value="Student">Student</label><label><input type="radio" name="fb-role" value="Working tech">Working tech</label><label><input type="radio" name="fb-role" value="Teacher or trainer">Teacher or trainer</label><label><input type="radio" name="fb-role" value="Other">Other</label></div></fieldset>
+        <fieldset><legend>What did you try?</legend><div class="fb-chips" data-q="tried">
+          <label><input type="checkbox" value="Learn pages">Learn pages</label><label><input type="checkbox" value="Rig simulator">Rig simulator</label><label><input type="checkbox" value="16-channel desk">16-channel desk</label><label><input type="checkbox" value="Hear it / ear drills">Hear it / ear drills</label><label><input type="checkbox" value="Quizzes">Quizzes</label><label><input type="checkbox" value="Dante and networks">Dante and networks</label><label><input type="checkbox" value="Instructor tools">Instructor tools</label></div></fieldset>
+        <fieldset><legend>How easy was it to find your way around?</legend><div class="fb-scale" data-q="ease"><span class="note">Hard</span><label><input type="radio" name="fb-ease" value="1">1</label><label><input type="radio" name="fb-ease" value="2">2</label><label><input type="radio" name="fb-ease" value="3">3</label><label><input type="radio" name="fb-ease" value="4">4</label><label><input type="radio" name="fb-ease" value="5">5</label><span class="note">Easy</span></div></fieldset>
+        <fieldset><legend>Did you learn something you could use on a real rig?</legend><div class="fb-chips" data-q="learned"><label><input type="radio" name="fb-learned" value="Yes">Yes</label><label><input type="radio" name="fb-learned" value="A little">A little</label><label><input type="radio" name="fb-learned" value="No">No</label><label><input type="radio" name="fb-learned" value="I knew it already">I knew it already</label></div></fieldset>
+        <fieldset><legend>How likely are you to recommend it to someone learning sound? (0–10)</legend><div class="fb-scale fb-nps" data-q="nps"></div></fieldset>
+        <div class="ctl"><label for="fb-bad">What confused you, or didn't work?</label><textarea id="fb-bad" rows="3"></textarea></div>
+        <div class="ctl"><label for="fb-want">What's missing, or what would make you come back?</label><textarea id="fb-want" rows="3"></textarea></div>
+        <p class="note">Don't include names, passwords or venue details. Your device type, theme and how many pages you've opened are added so problems can be reproduced.</p>
+        <div class="st-btns"><button class="btn primary" id="fb-copy">Copy feedback</button><a class="btn" id="fb-gh" target="_blank" rel="noopener">Send as a GitHub issue ↗</a></div>
+        <p class="note" id="fb-msg" aria-live="polite"></p>
+      </div>
+    </details>
+  </div>
   <div class="hero">
     <div class="hero-text">
       <div class="label">Live sound foundations · works offline</div>
@@ -2480,7 +2638,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
         <label class="label" for="ld-min">Amp minimum load</label><select id="ld-min"><option value="2">2 Ω</option><option value="4" selected>4 Ω</option><option value="8">8 Ω</option></select>
       </div>
       <div class="row"><label class="label" for="ld-p">Amp power at 8 Ω (W)</label><input type="text" id="ld-p" value="600"></div>
-      <div class="out" id="ld-out"></div>
+      <div class="out" id="spk-out" aria-live="polite"></div>
       <p class="note">Most speaker cabinets with two speakON sockets are wired in parallel: daisy-chaining two 8 Ω boxes gives 4 Ω.</p>
     </div>
     <div class="panel tool">
@@ -3291,6 +3449,7 @@ function show(arg){
   if(window.SUBGO[v]){if(sub)SUBGO[v](sub,false,true);else try{history.replaceState(null,"","#"+v+"/"+SUBNOW[v]())}catch(e){}}
   document.title=(NAMES_V[v]?NAMES_V[v]+" · ":"")+"Signal Path Trainer";
   const t=document.querySelector('.tab[data-v="'+v+'"]');if(t)requestAnimationFrame(()=>centerIn(t,document.querySelector("nav")));
+  if(window.markSeen)markSeen(v);
 }
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>go(t.dataset.v)));
 document.querySelectorAll(".pnav").forEach(b=>b.addEventListener("click",()=>{const g=b.dataset.g;if(g==="home"){go("home");return}const last=store.get("spt-last-"+g,null);go(GROUPS[g].includes(last)?last:GROUPS[g][0])}));
@@ -5156,10 +5315,10 @@ function drawXO(){
 function load(){
   const n=+$("#ld-n").value,z=+$("#ld-z").value,w=$("#ld-w").value,mn=+$("#ld-min").value,p8=parseFloat($("#ld-p").value);
   let Z,note="";
-  if(w==="p")Z=z/n;else if(w==="s")Z=z*n;else{if(n!==4){$("#ld-out").innerHTML="Series-parallel needs four speakers: two series pairs, wired in parallel.";return}Z=z}
+  if(w==="p")Z=z/n;else if(w==="s")Z=z*n;else{if(n!==4){$("#spk-out").innerHTML="Series-parallel needs four speakers: two series pairs, wired in parallel.";return}Z=z}
   const V=Math.sqrt((isNaN(p8)?0:p8)*8),P=V*V/Z,per=P/n;
   let verdict=Z<mn?`<b style="color:var(--bad)">Too low.</b> The amp may overheat, distort or go into protect. Use fewer speakers per channel, or another amp channel.`:Z===mn?`<b style="color:var(--warn)">At the amp's limit.</b> Allowed if the amp is rated for it, but it will run hotter.`:`<b style="color:var(--ok)">Safe load</b> for this amp.`;
-  $("#ld-out").innerHTML=`Total load: <b>${Z%1?Z.toFixed(2):Z} Ω</b>. ${verdict}`+(p8>0?`<br>Ideal power at this load ≈ <b>${Math.round(P)} W</b> total, about ${Math.round(per)} W per speaker.<br><span class="note">Calculated as V² ÷ Z from the 8 Ω rating. Real amps deliver less at low loads; check the spec sheet's 4 Ω and 2 Ω figures.</span>`:"");
+  $("#spk-out").innerHTML=`Total load: <b>${Z%1?Z.toFixed(2):Z} Ω</b>. ${verdict}`+(p8>0?`<br>Ideal power at this load ≈ <b>${Math.round(P)} W</b> total, about ${Math.round(per)} W per speaker.<br><span class="note">Calculated as V² ÷ Z from the 8 Ω rating. Real amps deliver less at low loads; check the spec sheet's 4 Ω and 2 Ω figures.</span>`:"");
 }
 ["ld-n","ld-z","ld-w","ld-min","ld-p"].forEach(id=>$("#"+id).addEventListener("input",load));load();
 
@@ -5979,17 +6138,18 @@ Object.entries(SUBNAV).forEach(([v,zones])=>{
   // remove containers emptied by the move
   [...sec.children].forEach(c=>{if(c.classList.contains("phead")||c.classList.contains("pnext"))return;if(!c.querySelector(".panel")&&!c.classList.contains("panel")&&(c.classList.contains("grid2")||c.classList.contains("proto")))c.remove()});
   const head=sec.querySelector(".pmap")||sec.querySelector(".phead");
-  const nav=document.createElement("nav");nav.className="panel secnav";nav.setAttribute("aria-label",v==="showday"?"Stages of the day":"Sections on this page");nav.innerHTML=`<span class="label mapl">${v==="showday"?"Stages of the day":"On this page"}</span><div class="secnav-map"></div>`;
+  const nav=document.createElement("nav");nav.className="panel secnav";nav.setAttribute("aria-label",v==="showday"?"Stages of the day":"Sections on this page");nav.innerHTML=`<span class="label mapl">${v==="showday"?"Stages of the day":"On this page"}</span><div class="secnav-map"></div><div class="subchips"></div>`;
   const op=sec.querySelector(".phead .onpage");if(op)op.remove();
   if(head)head.after(nav,holder);else sec.prepend(nav,holder);
   let cur=store.get("spt-sub-"+v,items[0].id);if(!items.find(i=>i.id===cur))cur=items[0].id;
   function render(){
-    nav.querySelector(".secnav-map").innerHTML=navMap(zones,cur);requestAnimationFrame(()=>centerIn(nav.querySelector("[aria-current]"),nav));
+    nav.querySelector(".secnav-map").innerHTML=navMap(zones,cur);requestAnimationFrame(()=>centerIn(nav.querySelector(".secnav-map [aria-current]"),nav));
+    const sc=nav.querySelector(".subchips");sc.innerHTML=items.map((it,k)=>`<button data-nav="${it.id}"${it.id===cur?' aria-current="true"':""}><i>${k+1}</i>${it.t}</button>`).join("");requestAnimationFrame(()=>{const c=sc.querySelector("[aria-current]");if(c&&sc.scrollWidth>sc.clientWidth)sc.scrollLeft=c.offsetLeft-(sc.clientWidth-c.offsetWidth)/2});
     items.forEach((it,k)=>{it.el.hidden=it.id!==cur;let f=it.el.querySelector(".subfoot");if(!f){f=document.createElement("div");f.className="subfoot";it.el.appendChild(f)}
       const nx=items[k+1],pv=items[k-1];
-      f.innerHTML=(pv?`<button class="btn" data-sub-go="${pv.id}">← ${pv.t}</button>`:"<span></span>")+`<span class="note">${k+1} of ${items.length}</span>`+(nx?`<button class="btn primary" data-sub-go="${nx.id}">${nx.t} →</button>`:"<span></span>")});
+      f.innerHTML=(pv?`<button class="btn" data-sub-go="${pv.id}" aria-label="Previous: ${pv.t}"><span class="sf-ar">←</span><span class="sf-t">${pv.t}</span></button>`:"<span></span>")+`<span class="note">${k+1} of ${items.length}</span>`+(nx?`<button class="btn primary" data-sub-go="${nx.id}" aria-label="Next: ${nx.t}"><span class="sf-t">${nx.t}</span><span class="sf-ar">→</span></button>`:"<span></span>")});
   }
-  function goSub(id,scroll,fromHash){if(!items.find(i=>i.id===id))return;const ch=cur!==id;cur=id;store.set("spt-sub-"+v,id);if(ch||fromHash)render();
+  function goSub(id,scroll,fromHash){if(!items.find(i=>i.id===id))return;if(window.markSeen)markSeen(v,id);const ch=cur!==id;cur=id;store.set("spt-sub-"+v,id);if(ch||fromHash)render();
     if(!fromHash&&curView===v&&location.hash.slice(1)!==v+"/"+id)try{history.pushState(null,"","#"+v+"/"+id)}catch(e){}
     if(scroll)nav.scrollIntoView({behavior:"smooth",block:"start"})}
   SUBGO[v]=goSub;SUBNOW[v]=()=>cur;
@@ -7028,6 +7188,7 @@ function hub(){S=null;const due=QB.filter(q=>SR[q.id]&&SR[q.id].b<=2).length,see
 function start(mode,topic,n){let list;
  if(mode==="topic")list=shuf(QB.filter(q=>q.t===topic)).slice(0,n||10);
  else if(mode==="mixed")list=shuf(QB).slice(0,15);
+ else if(mode==="daily"){const w=shuf(QB.filter(q=>SR[q.id]&&SR[q.id].b<=2));list=w.concat(shuf(QB).filter(q=>!w.includes(q))).slice(0,3)}
  else if(mode==="review")list=QB.filter(q=>SR[q.id]&&SR[q.id].b<=2).sort((a,b)=>SR[a.id].b-SR[b.id].b).slice(0,12);
  else if(mode==="listen")list=Array.from({length:6},()=>{const F=[125,250,500,1000,2000,4000,8000],f=F[Math.floor(Math.random()*F.length)],o=shuf(F.filter(x=>x!==f)).slice(0,3).concat(f);return{type:"listen",f,o:shuf(o),t:"listen",id:null,q:"Pink noise with one band boosted by 12 dB. Which frequency?"}});
  else if(mode==="flash"){flash();return}
@@ -7047,10 +7208,11 @@ function mark(ok,expl){const q=S.list[S.i];S.done=true;if(ok)S.score++;else S.wr
  root.querySelector(".qz-fb").innerHTML=`<div class="qz-res ${ok?"ok":"no"}"><b>${ok?"✓ Correct.":"✗ Not quite."}</b> ${expl||""}</div><button class="btn primary" data-qz="next">${S.i<S.list.length-1?"Next question →":"See results"}</button>`;
  root.querySelector(".qz-score").textContent="Score "+S.score}
 function results(){stopTone();const pct=Math.round(S.score/S.list.length*100);
+ if(S.mode==="daily"&&window.DAILY)DAILY.mark("quiz");
  if(S.mode==="topic"&&S.list.length>=5){BEST[S.topic]=Math.max(BEST[S.topic]||0,pct);store.set(BK,BEST)}
  root.innerHTML=`<div class="qz-card qz-done"><div class="label">Results</div><div class="bigout">${S.score} / ${S.list.length}</div><p>${pct>=80?"Great work: you know this.":pct>=50?"Getting there. Review the ones you missed and try again.":"Worth another read of the topic, then try again."}</p>
   ${S.wrong.length?`<h3>Review</h3><ul class="qz-review">${S.wrong.map(q=>`<li><b>${q.q}</b><br>${q.type==="order"?"Order: "+q.items.join(" → "):q.type==="listen"?"Answer: "+fmtF(q.f):"Answer: "+q.o[q.a]+". "+(q.e||"")}</li>`).join("")}</ul>`:""}
-  <div class="bd-btns"><button class="btn primary" data-qz="again">Try again</button>${S.mode==="topic"?`<button class="btn" data-go="${S.topic}">Read the topic</button>`:""}<button class="btn" data-qz="hub">All quizzes</button></div></div>`}
+  <div class="bd-btns"><button class="btn primary" data-qz="again">Try again</button>${S.mode==="topic"?`<button class="btn" data-go="${S.topic}">Read the topic</button>`:""}${S.mode==="daily"?`<button class="btn" data-go="home">Back to Home</button>`:""}<button class="btn" data-qz="hub">All quizzes</button></div></div>`}
 /* listening audio */
 let AC=null,src=null;
 function stopTone(){if(src){try{src.stop()}catch(e){}src=null}}
@@ -7077,7 +7239,7 @@ root.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)retur
  if(b.dataset.a!==undefined&&!S.done){const q=S.list[S.i],k=+b.dataset.a;
    if(q.type==="listen"){const ok=q.o[k]===q.f;root.querySelectorAll(".qz-opt").forEach((x,i)=>x.classList.add(q.o[i]===q.f?"ok":i===k?"no":"dim"));mark(ok,`It was ${fmtF(q.f)}. ${q.f<=250?"Low boosts sound boomy or muddy.":q.f<=1000?"Mids sound honky or boxy.":q.f<=4000?"Upper mids sound harsh, nasal or 'in your face'.":"High boosts sound hissy and sizzly."}`)}
    else{const ok=S.opts[k].ok;root.querySelectorAll(".qz-opt").forEach((x,i)=>x.classList.add(S.opts[i].ok?"ok":i===k?"no":"dim"));mark(ok,q.e)}}});
-window.QUIZ={start:(t,n)=>{go("quiz");start("topic",t,n)},QB};
+window.QUIZ={start:(t,n)=>{go("quiz");start("topic",t,n)},daily:()=>{go("quiz");start("daily")},QB};
 onShow.quiz={enter:()=>{if(!S)hub()},leave:stopTone};hub();
 // quick-quiz links at the end of each Learn page (and Show control)
 Object.keys(QTOP).forEach(t=>{const sec=$("#v-"+t);if(!sec)return;const nx=sec.querySelector(".pnext");const d=document.createElement("div");d.className="panel qq";
@@ -7099,9 +7261,9 @@ const orient=()=>{const l=innerWidth>innerHeight;H.classList.toggle("landscape",
 window.DEVICE={kind,coarse,standalone,ios:iphone||ipad};
 // home-screen meta (works when the page is opened directly in Safari)
 const head=document.head||document.getElementsByTagName("head")[0];const meta=(n,c,a="name")=>{const m=document.createElement("meta");m.setAttribute(a,n);m.content=c;head.appendChild(m)};
-meta("apple-mobile-web-app-capable","yes");meta("mobile-web-app-capable","yes");meta("apple-mobile-web-app-status-bar-style","black-translucent");meta("apple-mobile-web-app-title","Signal Path");meta("theme-color","#191d22");
-const hasMan=!!document.querySelector('link[rel="manifest"]');const ICON="data:image/png;base64,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";if(!document.querySelector('link[rel="apple-touch-icon"]')){const l=document.createElement("link");l.rel="apple-touch-icon";l.href=ICON;head.appendChild(l)}
-if(!hasMan)try{const man={name:"Signal Path Trainer",short_name:"Signal Path",display:"standalone",background_color:"#191d22",theme_color:"#191d22",start_url:location.href.split("#")[0],icons:[{src:ICON,sizes:"180x180",type:"image/png"}]};const ml=document.createElement("link");ml.rel="manifest";ml.href=URL.createObjectURL(new Blob([JSON.stringify(man)],{type:"application/manifest+json"}));head.appendChild(ml)}catch(e){}
+meta("apple-mobile-web-app-capable","yes");meta("mobile-web-app-capable","yes");meta("apple-mobile-web-app-status-bar-style","black-translucent");meta("apple-mobile-web-app-title","Signal Path");meta("theme-color","#111418");
+const hasMan=!!document.querySelector('link[rel="manifest"]');const ICON="data:image/png;base64,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";if(!document.querySelector('link[rel="apple-touch-icon"]')){const l=document.createElement("link");l.rel="apple-touch-icon";l.href=ICON;head.appendChild(l)}
+if(!hasMan)try{const man={name:"Signal Path Trainer",short_name:"Signal Path",display:"standalone",background_color:"#111418",theme_color:"#111418",start_url:location.href.split("#")[0],icons:[{src:ICON,sizes:"180x180",type:"image/png"}]};const ml=document.createElement("link");ml.rel="manifest";ml.href=URL.createObjectURL(new Blob([JSON.stringify(man)],{type:"application/manifest+json"}));head.appendChild(ml)}catch(e){}
 try{if(navigator.audioSession)navigator.audioSession.type="playback"}catch(e){}
 try{if(navigator.storage&&navigator.storage.persist&&location.protocol.startsWith("http"))navigator.storage.persist()}catch(e){}
 // text size
@@ -7496,7 +7658,7 @@ function play(){const c=BAND.ctx();if(!c)return;const inp=c.createGain(),a=c.cre
 $("#dr-play").onclick=()=>{if(D.on)BAND.stop();else play()};
 $("#dr-ab").addEventListener("click",e=>{const b=e.target.closest("button");if(b)setAB(b.dataset.ab)});
 $("#dr-mode").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;D.mode=b.dataset.m;$("#dr-mode").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));next()});
-$("#dr-ans").addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b||D.done)return;D.done=true;const k=+b.dataset.a,ok=k===D.cur.right,s=D.score[D.mode]||[0,0];s[1]++;if(ok)s[0]++;D.score[D.mode]=s;store.set("spt-drills",D.score);
+$("#dr-ans").addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b||D.done)return;D.done=true;const k=+b.dataset.a,ok=k===D.cur.right,s=D.score[D.mode]||[0,0];s[1]++;if(ok)s[0]++;D.score[D.mode]=s;store.set("spt-drills",D.score);if(window.DAILY&&DAILY.want==="ear")DAILY.mark("ear");
   $("#dr-ans").querySelectorAll("[data-a]").forEach((x,i)=>x.classList.add(i===D.cur.right?"ok":i===k?"no":"dim"));$("#dr-fb").innerHTML=`<b>${ok?"✓ Right.":"✗ Not this time."}</b> ${D.cur.why} <button class="btn" id="dr-next">Next →</button>`;sc()});
 $("#dr-fb").addEventListener("click",e=>{if(e.target.id==="dr-next")next()});
 next();
@@ -7563,6 +7725,104 @@ function pe(){const bud=+$("#pe-bud").value||0;let W=0;ITEMS.forEach((_,i)=>{W+=
    <p><b class="mono">${W} W</b> of a <b class="mono">${bud} W</b> budget.</p><p class="sf-verdict ${c}">${pc>100?"✗ Over budget. Some devices won't power up, or the switch will shut ports down. Move devices to another PoE switch or use injectors.":pc>80?"⚠ Close to the limit. Devices draw more when they start up.":"✓ Within budget."}</p><p class="note">Use each device's maximum draw from its spec sheet, and check each port's limit too.</p>`}
 $("#pe-items").addEventListener("input",pe);$("#pe-bud").addEventListener("input",pe);pe();
 })();
+
+/* =========================================================
+   THEME — Night console (dark) / Studio (light) / follow the device
+   ========================================================= */
+(function(){
+const H=document.documentElement,mq=matchMedia("(prefers-color-scheme: light)");
+let mode=store.get("spt-theme","auto");
+function apply(){if(mode==="auto")H.removeAttribute("data-theme");else H.setAttribute("data-theme",mode);
+  const light=mode==="light"||(mode==="auto"&&mq.matches);H.classList.toggle("is-light",light);
+  document.querySelectorAll('meta[name="theme-color"]').forEach(m=>m.content=light?"#f6f3ee":"#111418");
+  document.querySelectorAll(".th-pick button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.th===mode))}
+const bar=document.querySelector(".appbar")||document.querySelector("header");
+if(bar){const t=document.createElement("div");t.className="th-pick";t.setAttribute("role","group");t.setAttribute("aria-label","Theme");
+  t.innerHTML=`<button data-th="auto" title="Follow this device" aria-label="Theme follows this device"><span class="th-lg">Auto</span><span class="th-sm" aria-hidden="true">◐</span></button><button data-th="light" title="Studio: light theme" aria-label="Light theme">☀</button><button data-th="dark" title="Night console: dark theme" aria-label="Dark theme">☾</button>`;
+  const ts=bar.querySelector(".ts-pick");ts?ts.before(t):bar.appendChild(t);
+  t.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const O=["auto","light","dark"];mode=H.classList.contains("narrow")&&b.dataset.th===mode?O[(O.indexOf(mode)+1)%3]:b.dataset.th;store.set("spt-theme",mode);apply();window.dispatchEvent(new Event("resize"))})}
+(mq.addEventListener?mq.addEventListener("change",apply):mq.addListener(apply));
+apply();window.THEME={get:()=>mode,isLight:()=>H.classList.contains("is-light")};
+})();
+
+
+/* =========================================================
+   STUDIO HOME — continue card, today's soundcheck, skill rings
+   ========================================================= */
+(function(){
+if(!$("#hm-studio"))return;
+const dkey=d=>{const x=d||new Date();return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0")};
+const yday=()=>{const d=new Date();d.setDate(d.getDate()-1);return dkey(d)};
+/* --- pages seen --- */
+const SEEN=store.get("spt-seen",{});
+window.markSeen=(v,id)=>{if(!v||v==="home")return;if(id==null&&window.SUBNOW&&SUBNOW[v])id=SUBNOW[v]();const k=id||"_";const l=SEEN[v]||(SEEN[v]=[]);if(!l.includes(k)){l.push(k);store.set("spt-seen",SEEN)}};
+const subs=v=>(typeof SUBNAV!=="undefined"&&SUBNAV[v])?SUBNAV[v].flatMap(z=>z.items):null;
+const seenFrac=v=>{const it=subs(v),l=SEEN[v]||[];if(!it)return l.length?1:0;return it.filter(i=>l.includes(i.id)).length/it.length};
+/* --- daily soundcheck --- */
+const DT=[{k:"fault",t:"Fix one fault on the rig",go:"Rig"},{k:"ear",t:"One ear drill: boost or cut?",go:"Hear it"},{k:"quiz",t:"Three quick questions",go:"Quiz"}];
+function dstate(){let d=store.get("spt-daily",{});if(d.d!==dkey())d={d:dkey(),done:[],streak:d.streak||0,full:d.full||null};return d}
+window.DAILY={want:null,mark(k){const d=dstate();if(!d.done.includes(k)){d.done.push(k);
+    if(DT.every(t=>d.done.includes(t.k))&&d.full!==d.d){d.streak=d.full===yday()?(d.streak||0)+1:1;d.full=d.d}
+    store.set("spt-daily",d)}DAILY.want=null;if(curView==="home")render()}};
+function streakNow(d){return d.full===d.d||d.full===yday()?d.streak||0:0}
+function startTask(k){DAILY.want=k;
+  if(k==="fault"){const F=RIG.faults();let n=0;for(const c of dkey())n=(n*31+c.charCodeAt(0))>>>0;const f=F[n%F.length];
+    RIG.run({faults:[f.id],name:"Today's soundcheck",brief:"One fault for today. Find it, fix it, and it's ticked off.",back:{view:"home",label:"Back to Home"},onDone:()=>DAILY.mark("fault")})}
+  else if(k==="ear"){go("hear");setTimeout(()=>{const p=$("#dr-panel");if(p){const b=p.querySelector('#dr-mode [data-m="bc"]');if(b&&b.getAttribute("aria-pressed")!=="true")b.click();p.scrollIntoView({behavior:"smooth",block:"start"})}},250)}
+  else if(k==="quiz"&&QUIZ.daily)QUIZ.daily()}
+/* --- render --- */
+const SK=[["flow","Signal flow"],["gain","Gain"],["eq","EQ"],["dyn","Dynamics"],["mics","Mics"],["routing","Buses"],["mon","Monitors"],["patch","Patching"],["sys","System"],["safety","Safety"],["mix","Mixing"],["dnt","Dante"]];
+function skill(v){const best=(store.get("spt-quiz-best",{})||{})[v],s=seenFrac(v);return Math.round(best!=null?60*s+.4*best:60*s)}
+function render(){
+  /* continue */
+  const last=store.get("spt-last",null),L=$("#st-cont-l"),H=$("#st-cont-h"),P=$("#st-cont-p"),G=$("#st-cont-go"),A=$("#st-cont-all");
+  const old=$("#st-cont .st-bar");if(old)old.remove();
+  if(last&&NAMES_V[last]&&last!=="home"){const it=subs(last),cur=it&&window.SUBNOW&&SUBNOW[last]?SUBNOW[last]():null,k=it?it.findIndex(i=>i.id===cur):-1;
+    L.textContent="Continue where you left off";
+    if(it&&k>=0){const n=it[k+1];H.textContent=NAMES_V[last]+": "+it[k].t;
+      P.textContent=`You're on section ${k+1} of ${it.length}.`+(n?` Next up: ${n.t}.`:" That's the last section on this page.");
+      P.insertAdjacentHTML("afterend",`<div class="st-bar" aria-hidden="true"><i style="width:${Math.round((k+1)/it.length*100)}%"></i></div>`);G.dataset.go=last+"/"+cur}
+    else{H.textContent=NAMES_V[last];P.textContent="Pick up where you were.";G.dataset.go=last}
+    G.textContent="Continue";const g=groupOf(last);A.textContent="See all of "+({practice:"Practice",control:"Show control",ref:"Reference"}[g]||"Learn");A.dataset.go=(GROUPS[g]||GROUPS.learn)[0]}
+  else{L.textContent="Start here";H.textContent="Signal flow: the order a signal travels";P.textContent="Every fault you'll ever fix starts with knowing where the signal goes next. Begin here, then try it on the rig.";G.textContent="Start learning";G.dataset.go="flow";A.textContent="Open the rig simulator";A.dataset.go="desk"}
+  /* daily */
+  const d=dstate(),st=streakNow(d);
+  $("#st-streak").textContent=st?`🔥 ${st}-day streak`:d.done.length===3?"All done today":`${d.done.length} / 3 today`;
+  $("#st-tasks").innerHTML=DT.map((t,i)=>{const done=d.done.includes(t.k);return `<li class="${done?"done":""}"><button data-daily="${t.k}"><span class="n">${done?"✓":i+1}</span><span class="t">${t.t}</span><span class="go">${done?"Again":t.go+" →"}</span></button></li>`}).join("");
+  $("#st-dnote").textContent=d.done.length===3?"Soundcheck done. Come back tomorrow to keep the streak going.":"Do all three each day to build a streak. Progress is saved in this browser.";
+  /* skills */
+  const vals=SK.filter(([v])=>views.includes(v)).map(([v,n])=>[v,n,skill(v)]);
+  const avg=Math.round(vals.reduce((a,x)=>a+x[2],0)/vals.length);
+  $("#st-level").textContent=`Foundation level · ${avg}% · read each page and pass its quiz to fill a ring`;
+  $("#st-rings").innerHTML=vals.map(([v,n,p])=>`<button class="st-ring" data-go="${v}" aria-label="${n}: ${p}%"><span class="r" style="--p:${p};--rc:var(${p>=80?"--ok":"--route"})"><b>${p}%</b></span><span>${n}</span></button>`).join("");
+}
+$("#st-tasks").addEventListener("click",e=>{const b=e.target.closest("[data-daily]");if(b)startTask(b.dataset.daily)});
+const prev=onShow.home;onShow.home={enter:()=>{prev&&prev.enter&&prev.enter();render()},leave:()=>{prev&&prev.leave&&prev.leave()}};
+if(curView==="home")render();
+if(curView)markSeen(curView);
+})();
+
+
+/* =========================================================
+   TESTER FEEDBACK — copy or open a prefilled GitHub issue
+   ========================================================= */
+(function(){
+const F=$("#st-fb");if(!F)return;
+const REPO="https://github.com/Butters21/SignalPathTrainer/issues/new";
+F.querySelector(".fb-nps").innerHTML=Array.from({length:11},(_,i)=>`<label><input type="radio" name="fb-nps" value="${i}">${i}</label>`).join("");
+const val=n=>{const x=F.querySelector(`input[name="fb-${n}"]:checked`);return x?x.value:"—"};
+function text(){const tried=[...F.querySelectorAll('[data-q="tried"] input:checked')].map(x=>x.value).join(", ")||"—";
+  const H=document.documentElement,dev=["dev-iphone","dev-ipad","dev-phone"].find(c=>H.classList.contains(c))||(H.classList.contains("touch")?"touch":"desktop");
+  const seen=Object.values(store.get("spt-seen",{})).reduce((a,l)=>a+l.length,0);
+  return `Role: ${val("role")}\nTried: ${tried}\nEase (1-5): ${val("ease")}\nLearned something usable: ${val("learned")}\nRecommend (0-10): ${val("nps")}\n\nConfusing or broken:\n${$("#fb-bad").value.trim()||"—"}\n\nMissing / would bring me back:\n${$("#fb-want").value.trim()||"—"}\n\n---\nDevice: ${dev}, ${innerWidth}×${innerHeight} · Theme: ${window.THEME?THEME.get():"?"} · Pages opened: ${seen} · Build: ${document.querySelector('meta[name="spt-build"]')?.content||location.pathname}`}
+function upd(){$("#fb-gh").href=REPO+"?title="+encodeURIComponent("Tester feedback: "+val("role"))+"&labels=feedback&body="+encodeURIComponent(text())}
+F.addEventListener("input",upd);F.addEventListener("toggle",upd);upd();
+$("#fb-copy").addEventListener("click",async()=>{const t=text();let ok=false;try{await navigator.clipboard.writeText(t);ok=true}catch(e){}
+  if(!ok){const ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();try{ok=document.execCommand("copy")}catch(e){}ta.remove()}
+  $("#fb-msg").textContent=ok?"Copied. Paste it into a message to whoever sent you the link.":"Couldn't copy automatically. Use the GitHub button instead."});
+$("#fb-gh").addEventListener("click",()=>{$("#fb-msg").textContent="Opening GitHub. You'll need a free GitHub account to post; otherwise use Copy feedback."});
+})();
+
 </script>
 
 <script>
