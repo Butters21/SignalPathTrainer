@@ -419,6 +419,80 @@ nav.secnav{position:static;z-index:auto;margin-bottom:0;padding-block:14px;borde
 .mx-brief{margin:8px 0;min-height:1.4em}.mx-brief .btn{margin-left:8px}.mx-fb{min-height:1.4em}
 .pn-stage{fill:var(--panel2);stroke:var(--line)}.pn-spk{fill:var(--accent)}.pn-sl{fill:#111;font:700 15px system-ui;text-anchor:middle}.pn-key{list-style:none;display:flex;gap:14px;padding:0;flex-wrap:wrap}.pn-key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
 .dr-card{border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-top:8px}.dr-q{font-weight:600}.dr-ans{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.dr-ans .qz-opt{flex:1 1 140px}.dr-fb{min-height:1.4em}
+html.rig-wide .wrap{max-width:1640px}
+body.rig-focus .appbar,body.rig-focus nav:not(.secnav):not(.pmap),body.rig-focus #v-desk .phead,body.rig-focus #v-desk nav.pmap,body.rig-focus #v-desk .pnext,body.rig-focus .site-foot,body.rig-focus footer{display:none!important}
+body.rig-focus .wrap{max-width:none;padding-top:8px}
+.r2-bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin:0 0 10px;padding:10px 12px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.r2-listen{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.r2-listen .label{margin:0}
+.r2-vol{display:grid;gap:2px;min-width:130px}.r2-vol .label{margin:0}
+.r2-spl{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}.r2-spl .label{margin:0}.r2-spl .note{margin:0;font-size:.75rem}
+.r2-tools{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+#rg-tabs.r2-tabs{display:none;margin:0 0 10px}.r2-stage .cab{fill:none!important;stroke:var(--muted);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round;opacity:.9}.r2-stage .cab.live{stroke:var(--ok)}.r2-stage .cab.out{stroke:var(--route);stroke-dasharray:6 4}.r2-stage .cab.pick{stroke:var(--accent);stroke-dasharray:4 4;stroke-width:3}.r2-stage .cab.broken{stroke:var(--bad);stroke-dasharray:2 5}.r2-stage .cab.loose{stroke-dasharray:3 4}
+.r2-src .chip{font-size:.64rem;white-space:normal;max-width:100%;min-width:0;overflow-wrap:anywhere;text-align:left}.r2-src{min-width:0}.r2-src .nm{white-space:nowrap}
+.r2-grid{display:grid;gap:14px;align-items:start}
+.r2-left,.r2-right{display:grid;gap:14px;min-width:0}
+.r2-panel{min-width:0;margin:0}
+@media(min-width:1440px){.r2-grid{grid-template-columns:minmax(520px,1fr) minmax(680px,1.1fr)}}
+#v-desk .strip2{min-width:0}#v-desk .strip2 .dbtn{flex:1 1 0;min-width:0;padding:4px 2px;overflow:hidden;text-overflow:clip}#v-desk .strip2 .selrow{flex-wrap:wrap;gap:2px}#v-desk .strip2 .knobs2{gap:4px 0}#v-desk .strip2 select{max-width:58px}
+#v-desk .r2-right .console{grid-template-columns:repeat(6,minmax(84px,1fr)) minmax(118px,1.1fr);min-width:660px}
+.r2-start{display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:16px;align-items:center}@media(max-width:800px){.r2-start{grid-template-columns:1fr}}
+.r2-start h3{margin:2px 0 4px}.r2-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.r2-card{display:grid;gap:4px;text-align:left;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;color:var(--fg);cursor:pointer;font:inherit}
+.r2-card b{font-size:1rem}.r2-card span{font-size:.84rem;color:var(--muted)}.r2-card:hover,.r2-card:focus-visible{border-color:var(--accent)}.r2-card.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+/* stage */
+.r2-stage{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 56px 128px;grid-template-areas:"srcs . box" "outs outs box";gap:0;padding:6px 4px 4px}
+.r2-stage>.cables{position:absolute!important;left:0;top:0;width:100%!important;height:100%!important;z-index:0;pointer-events:none;overflow:visible}
+.r2-stage .sitem{position:relative;left:auto;top:auto;width:auto;z-index:1}
+.r2-srcs{grid-area:srcs;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 10px;padding-bottom:30px}
+.r2-src .nm,.r2-out .nm{display:flex;align-items:center;gap:6px;font-weight:700}
+.r2-ic{display:inline-flex;width:18px;height:18px;color:var(--accent)}.r2-ic svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6}
+.r2-src .plug{right:auto;left:50%;top:auto;bottom:-8px;margin:0 0 0 -8px;width:16px;height:16px}
+.r2-src .chips{display:flex;flex-wrap:wrap;gap:4px}
+.r2-box{grid-area:box;background:var(--panel2);border:1px solid var(--route);border-radius:6px;padding:8px;z-index:1;align-self:start;display:grid;gap:6px}
+.r2-box .label{color:var(--route);margin:0}.r2-box .ports{gap:2px}.r2-box .port{padding:3px 0}.r2-box .pnum{min-width:12px}.r2-box .pn{color:var(--muted);font-size:.66rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62px}
+.r2-box .outs{display:grid;gap:4px}.r2-box .outs .o{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.7rem}.r2-box .outs .o i{width:10px;height:10px;border-radius:50%;background:var(--route);display:inline-block}
+.r2-box .snake{position:static!important;transform:none!important;width:auto!important;left:auto;top:auto;font-size:.68rem;color:var(--muted);text-align:center;border-top:1px dashed var(--line);padding-top:6px;writing-mode:horizontal-tb}
+.r2-outl{margin-top:6px!important}
+.r2-outs{grid-area:outs;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding-right:10px}
+.r2-orow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.r2-out .wk .knob{justify-items:start}
+.cab.broken{stroke:var(--bad);stroke-dasharray:2 5}.cab.loose{stroke:var(--muted);stroke-dasharray:3 4}
+/* signal path */
+.r2-panel .rig-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.r2-ph{margin:2px 0 0;font-size:1.05rem}.r2-pchs button{min-width:34px}.r2-pnote{margin:6px 0 10px}
+.r2-chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px 4px}
+.r2-node{display:grid;align-content:start;gap:2px;flex:1 1 104px;min-width:96px;max-width:190px;text-align:left;background:var(--panel2);border:1px solid var(--line);border-left:4px solid var(--muted);border-radius:6px;padding:6px 8px;color:var(--fg);cursor:pointer;font:inherit;font-size:.8rem}
+.r2-node:hover,.r2-node:focus-visible{border-color:var(--accent)}
+.r2-node.ok{border-left-color:var(--ok)}.r2-node.warn{border-left-color:var(--warn);background:color-mix(in srgb,var(--warn) 8%,var(--panel2))}
+.r2-node.bad{border-color:var(--bad);border-left-color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,var(--panel2))}
+.r2-node.dead{opacity:.55;border-left-color:var(--bad);border-style:dashed}.r2-node.off{opacity:.6}.r2-node.unk{border-style:dashed;border-left-style:solid;border-left-color:var(--muted)}
+.r2-node.unk .r2-nv{color:var(--accent)}
+.r2-nt{font-size:.66rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.r2-nv{font-family:var(--mono);font-size:.78rem}.r2-nw{font-size:.74rem;color:var(--muted);line-height:1.3}
+.r2-arr{align-self:center;color:var(--muted);font-size:.85rem}
+.r2-brs{display:grid;gap:8px;margin-top:10px;padding-left:12px;border-left:2px solid var(--line)}
+.r2-br{display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px;align-items:center}.r2-bl{font-size:.74rem;color:var(--muted);font-weight:700}
+.r2-flash{animation:r2f 1.4s ease-out}@keyframes r2f{0%,35%{box-shadow:0 0 0 3px var(--accent)}100%{box-shadow:0 0 0 0 transparent}}
+/* bigger, more readable desk */
+#v-desk .r2-right .strip2{font-size:.8rem;padding:8px 6px}
+#v-desk .r2-right .dbtn{font-size:.72rem;min-height:26px}
+#v-desk .r2-right .scrib{font-size:.78rem}
+#v-desk .r2-right .knob{font-size:.72rem}
+#v-desk .r2-right .proc{margin-top:0}
+@media(min-width:1440px){#v-desk .proc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* tablets: stage cards a bit tighter */
+@media(max-width:900px){.r2-stage{grid-template-columns:minmax(0,1fr) 44px 112px}.r2-srcs{gap:34px 8px}}
+/* phones: one section at a time */
+@media(max-width:699px){
+  #rg-tabs.r2-tabs{display:flex;position:sticky;top:0;z-index:5;overflow-x:auto}.r2-tabs button{flex:1 0 auto}
+  .r2-grid [data-p]{display:none}
+  .r2-grid[data-pane="stage"] [data-p="stage"],.r2-grid[data-pane="path"] [data-p="path"],.r2-grid[data-pane="desk"] [data-p="desk"],.r2-grid[data-pane="chan"] [data-p="chan"],.r2-grid[data-pane="fx"] [data-p="fx"]{display:block}
+  .r2-stage{grid-template-columns:minmax(0,1fr) 30px 92px}.r2-srcs{grid-template-columns:minmax(0,1fr);gap:30px 0}.r2-outs{grid-template-columns:minmax(0,1fr)}
+  .r2-src .chip{white-space:normal}.r2-src .nm{white-space:normal}.r2-stage .sitem{min-width:0;overflow:visible}.r2-box .pn{max-width:46px}
+  #rg-tabs.r2-tabs{background:var(--bg);z-index:20;padding:6px 0;margin:0 0 10px}#rg-tabs button{flex:1 1 auto;padding:8px 6px;font-size:.85rem}
+  .r2-arr{display:none}.r2-chain{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.r2-node{max-width:none;min-width:0}
+  .r2-src .sb{display:none}.r2-node{flex:1 1 44%;max-width:none}.r2-br{grid-template-columns:1fr}
+  .r2-tools{margin-left:0}.r2-spl .note{display:none}
+}
+
 .desk-note{margin-top:14px;background:color-mix(in srgb,var(--route) 10%,var(--panel2));border:1px solid color-mix(in srgb,var(--route) 45%,var(--line));border-radius:4px;padding:10px 12px;font-size:.88rem}
 .desk-note .label{color:var(--route);margin-bottom:4px}
 .desk-note dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;margin:0}
@@ -1740,20 +1814,24 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
 
 <!-- ================= RIG SIMULATOR ================= -->
 <section class="view" id="v-desk" hidden>
-  <div class="rig-top">
-    <div class="rig-title">
-      <div class="label">Live sound simulator</div>
-      <h2>Rig simulator</h2>
+  <div class="r2-bar">
+    <button class="btn primary" id="rg-sound" aria-pressed="false">Sound on</button>
+    <div class="seg" role="group" aria-label="Mode" id="rg-mode">
+      <button data-m="free" aria-pressed="true">Free play</button>
+      <button data-m="lesson" aria-pressed="false">Lessons</button>
+      <button data-m="practice" aria-pressed="false">Practice</button>
     </div>
-    <div class="rig-actions">
-      <button class="btn primary" id="rg-sound" aria-pressed="false">Sound on</button>
-      <div class="seg" role="group" aria-label="Mode" id="rg-mode">
-        <button data-m="free" aria-pressed="true">Free play</button>
-        <button data-m="lesson" aria-pressed="false">Lessons</button>
-        <button data-m="practice" aria-pressed="false">Practice</button>
+    <div class="r2-listen"><span class="label">Listening to</span>
+      <div class="seg" role="group" aria-label="Listening position" id="rg-listen">
+        <button data-l="mains" aria-pressed="true">Mains</button>
+        <button data-l="w0" aria-pressed="false">Wedge 1</button>
+        <button data-l="w1" aria-pressed="false">Wedge 2</button>
+        <button data-l="pfl" aria-pressed="false" id="rg-pfl-btn">Headphones (PFL)</button>
       </div>
-      <button class="btn" id="rg-reset">Reset the rig</button>
     </div>
+    <div class="r2-vol"><label for="rg-vol" class="label">Volume <span class="mono" id="rg-vol-v"></span></label><input type="range" id="rg-vol" min="0" max="100" step="1"></div>
+    <div class="r2-spl"><span class="label">Level here</span><b class="mono" id="rg-spl">—</b><span class="mono">dB SPL</span><span class="note" id="rg-spl-desc"></span></div>
+    <div class="r2-tools"><button class="btn" id="rg-ilbtn" data-il="1">Input list</button><button class="btn" id="rg-focus" aria-pressed="false" title="Hide the app menus and use the whole screen">⤢ Focus</button><button class="btn" id="rg-reset">Reset</button></div>
   </div>
 
   <div class="rig-task" id="rg-task"></div>
@@ -1762,29 +1840,28 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
   <div class="overlay" id="rg-pick" hidden role="dialog" aria-modal="true" aria-labelledby="rg-pick-h"><div class="dialog"><div class="dh"><h3 id="rg-pick-h">What do you want to do?</h3><button class="btn" id="pk-x" aria-label="Close">Close</button></div>
     <div class="pk"><div class="pk-tabs"><button data-p="learn">Learn</button><button data-p="practice">Practice</button><button data-p="ear">Ear training</button><button data-p="free">Free play</button></div><div class="pk-body"></div></div></div></div>
 
-  <div class="panel rig-panel">
-    <div class="rig-head"><div class="label">Stage</div><div class="note" style="margin:0">Click a cable's plug to pick it up, then click a stagebox input to plug it in.</div></div>
-    <div class="stage-wrap"><div class="rstage" id="rg-stage"><svg class="cables" id="rg-cables" aria-hidden="true"></svg></div></div>
+  <div class="r2-tabs seg" role="tablist" aria-label="Rig sections" id="rg-tabs">
+    <button data-pane="stage" aria-pressed="true">Stage</button><button data-pane="path" aria-pressed="false">Signal path</button><button data-pane="desk" aria-pressed="false">Desk</button><button data-pane="chan" aria-pressed="false">Channel</button><button data-pane="fx" aria-pressed="false">FX</button>
   </div>
 
-  <div class="panel rig-panel">
-    <div class="rig-head">
-      <div class="label">Console (FOH) · <span id="rg-conname"></span></div>
-      <div class="listen">
-        <span class="label">You are listening to</span>
-        <div class="seg" role="group" aria-label="Listening position" id="rg-listen">
-          <button data-l="mains" aria-pressed="true">Mains</button>
-          <button data-l="w0" aria-pressed="false">Wedge 1</button>
-          <button data-l="w1" aria-pressed="false">Wedge 2</button>
-          <button data-l="pfl" aria-pressed="false" id="rg-pfl-btn">Headphones (PFL)</button>
-        </div>
+  <div class="r2-grid" id="rg-grid" data-pane="stage">
+    <div class="r2-left">
+      <div class="panel r2-panel" data-p="stage">
+        <div class="rig-head"><div class="label">Stage</div><div class="note" style="margin:0">Tap a cable's plug to pick it up, then tap a stagebox input to plug it in.</div></div>
+        <div class="r2-stage" id="rg-stage"><svg class="cables" id="rg-cables" aria-hidden="true"></svg></div>
+      </div>
+      <div class="panel r2-panel" data-p="path">
+        <div class="rig-head"><div><div class="label">Signal path · tracer</div><h3 class="r2-ph" id="rg-path-h"></h3></div><div class="r2-pchs seg" id="rg-path-ch" role="group" aria-label="Channel to trace"></div></div>
+        <p class="note r2-pnote" id="rg-path-note"></p>
+        <div class="r2-path" id="rg-path"></div>
       </div>
     </div>
-    <div class="rig-bar">
-      <div class="spl"><div class="label">Level here</div><div><b class="mono" id="rg-spl">—</b> <span class="mono">dB SPL</span></div><div class="note" id="rg-spl-desc" style="margin:0">Press Sound on to start the band</div></div>
-      <div class="ctl" style="flex:1 1 200px;max-width:300px"><label for="rg-vol">Your headphone volume <span class="mono" id="rg-vol-v"></span></label><input type="range" id="rg-vol" min="0" max="100" step="1"></div>
-    </div>
-    <div class="console-wrap"><div class="console" id="rg-console"></div></div>
+    <div class="r2-right">
+      <div class="panel r2-panel" data-p="desk">
+        <div class="rig-head"><div class="label">Console (FOH) · <span id="rg-conname"></span></div><div class="note" style="margin:0">SEL opens a channel's EQ, compressor and effects below.</div></div>
+        <div class="console-wrap"><div class="console" id="rg-console"></div></div>
+      </div>
+      <div class="r2-panel" data-p="chan">
     <div class="proc" id="rg-proc">
       <div class="proc-head"><div><div class="label">Selected channel · press SEL on any strip</div><h3 id="pr-title"></h3></div></div>
       <div class="proc-grid">
@@ -1798,6 +1875,8 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
           <p class="note">Cut before you boost, make small moves, and switch the EQ out to compare. Match the make-up to the gain reduction so the compressor isn't fooling you with extra level. More in <i>The Mixing Engineer's Handbook</i> (Owsinski), chapters 5–7.</p></div>
       </div>
     </div>
+      </div>
+      <div class="r2-panel" data-p="fx">
     <div class="proc fxrack" id="rg-fx">
       <div class="proc-head"><div><div class="label">FX rack · returns feed the main mix</div><h3>Effects</h3></div><div class="note" style="margin:0">Song tempo: 120 BPM · quarter note 500 ms · dotted eighth 375 ms · eighth 250 ms</div></div>
       <div class="fx-grid"><div class="pblock fxu"><div class="pb-h"><span class="label">FX 1 · Reverb</span><div class="btnrow"><button class="dbtn mute" id="fxm0">MUTE</button><button class="dbtn lr" id="fxl0">LR</button></div></div>
@@ -1805,6 +1884,8 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
           <div class="fxrow"><div class="pknobs" id="fxk0"></div><div class="fxmeters"><div><div class="vm" id="fxi0"><div class="c"></div><div class="p"></div></div><span>IN</span></div><div><div class="vm" id="fxr0"><div class="c"></div><div class="p"></div></div><span>RET</span></div></div></div></div><div class="pblock fxu"><div class="pb-h"><span class="label">FX 2 · Delay</span><div class="btnrow"><button class="dbtn mute" id="fxm1">MUTE</button><button class="dbtn lr" id="fxl1">LR</button></div></div>
           <p class="note" style="margin:0">Repeats in time with the song. Fed by each channel's FX 2 send.</p>
           <div class="fxrow"><div class="pknobs" id="fxk1"></div><div class="fxmeters"><div><div class="vm" id="fxi1"><div class="c"></div><div class="p"></div></div><span>IN</span></div><div><div class="vm" id="fxr1"><div class="c"></div><div class="p"></div></div><span>RET</span></div></div></div></div></div>
+    </div>
+      </div>
     </div>
   </div>
 </section>
@@ -4016,27 +4097,39 @@ function doPop(why,i,extra){
   m.hidden=false;$("#rg-pop-close").focus();
 }
 
-/* ---------- stage ---------- */
+/* ---------- stage (v2: tidy rows + stagebox column + orthogonal cable lanes) ---------- */
+const ICON={mic:'<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="2" width="6" height="10" rx="3"/><path d="M4 9a6 6 0 0 0 12 0M10 15v3M7 18h6" fill="none"/></svg>',
+  di:'<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="5" width="14" height="10" rx="2"/><circle cx="7" cy="10" r="1.6"/><circle cx="13" cy="10" r="1.6"/></svg>',
+  lap:'<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="4" width="12" height="8" rx="1"/><path d="M2 15h16" fill="none"/></svg>',
+  spk:'<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="2" width="10" height="16" rx="2"/><circle cx="10" cy="12" r="3"/><circle cx="10" cy="6" r="1.4"/></svg>',
+  wdg:'<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 16 L6 6 H18 V16 Z"/><circle cx="11" cy="11" r="2.6"/></svg>'};
+const SICON={v1:"mic",v2:"mic",kick:"mic",bass:"di",keys:"di",play:"lap"};
 function renderStage(){
-  const st=$("#rg-stage");st.querySelectorAll(".sitem,.sbox,.snake").forEach(n=>n.remove());
-  KEYS.forEach(k=>{const s=SRC[k],d=document.createElement("div");d.className="sitem";d.id="si-"+k;d.style.left=s.x+"%";d.style.top=s.y+"%";
-    d.innerHTML=`<div class="nm">${s.nm}<span class="sig" id="sg-${k}" title="Signal"></span></div><div class="sb">${s.sb}</div><div class="chips"><span class="chip" id="pt-${k}"></span><button class="chip" data-swap="${k}">Swap cable</button>${k==="v1"||k==="v2"?`<button class="chip" data-msw="${k}" id="msw-${k}"></button><button class="chip" data-place="${k}" id="pl-${k}"></button>`:""}${s.lift?`<button class="chip" id="lift" data-lift="1">Ground lift</button>`:""}</div><button class="plug" data-plug="${k}" aria-label="Pick up the ${s.nm} cable"></button>`;
-    st.appendChild(d)});
-  [["w0","Wedge 1","In front of Vocal 1",8],["w1","Wedge 2","In front of Vocal 2",30]].forEach(([id,nm,sb,x],w)=>{const d=document.createElement("div");d.className="sitem";d.id="si-"+id;d.style.left=x+"%";d.style.top="66%";
-    d.innerHTML=`<div class="nm">${nm}</div><div class="sb">${sb} · Out ${w+1}</div><div class="chips"><button class="chip" data-wpow="${w}"></button></div><div class="wk" id="wk${w}"></div>`;st.appendChild(d);
-    const kn=knob({label:"Level",min:-30,max:10,step:1,def:0,get:()=>S.wedge[w].lvl,set:v=>S.wedge[w].lvl=v,fmt:v=>(v>0?"+":"")+v+" dB"});kn.style.justifyItems="start";d.querySelector(".wk").appendChild(kn);knobs.push(kn)});
-  const pa=document.createElement("div");pa.className="sitem";pa.id="si-pa";pa.style.left="53%";pa.style.top="66%";
-  pa.innerHTML=`<div class="nm">Main PA</div><div class="sb">L/R speakers, fed from the desk at FOH</div><div class="chips"><button class="chip" data-mpow="1"></button></div>`;st.appendChild(pa);
-  const sb=document.createElement("div");sb.className="sbox";
-  sb.innerHTML=`<div class="label" style="color:var(--route)">Stagebox</div><div class="ports">${[1,2,3,4,5,6,7,8].map(p=>`<button class="port" data-port="${p}" id="po${p}"><span class="jack"></span><span>${p}</span><span class="pn" id="pn${p}"></span></button>`).join("")}</div><div class="outs"><div class="o"><i></i>Out 1 → Wedge 1</div><div class="o"><i></i>Out 2 → Wedge 2</div></div>`;st.appendChild(sb);
-  const sn=document.createElement("div");sn.className="snake";sn.innerHTML="Snake<i></i>to FOH";st.appendChild(sn);
+  const st=$("#rg-stage");st.querySelectorAll(".r2-srcs,.r2-box,.r2-outs").forEach(n=>n.remove());
+  const g=document.createElement("div");g.className="r2-srcs";
+  KEYS.forEach(k=>{const s=SRC[k],d=document.createElement("div");d.className="sitem r2-src";d.id="si-"+k;
+    d.innerHTML=`<div class="nm"><span class="r2-ic">${ICON[SICON[k]]}</span><span>${s.nm}</span><span class="sig" id="sg-${k}" title="Signal"></span></div><div class="sb">${s.sb}</div>
+      <div class="chips"><span class="chip" id="pt-${k}"></span><button class="chip" data-swap="${k}">Swap cable</button>${k==="v1"||k==="v2"?`<button class="chip" data-msw="${k}" id="msw-${k}"></button><button class="chip" data-place="${k}" id="pl-${k}"></button>`:""}${s.lift?`<button class="chip" id="lift" data-lift="1">Ground lift</button>`:""}</div>
+      <button class="plug" data-plug="${k}" aria-label="Pick up the ${s.nm} cable"></button>`;
+    g.appendChild(d)});
+  st.appendChild(g);
+  const sb=document.createElement("div");sb.className="r2-box";
+  sb.innerHTML=`<div class="label">Stagebox</div><div class="ports">${[1,2,3,4,5,6,7,8].map(p=>`<button class="port" data-port="${p}" id="po${p}"><span class="jack"></span><span class="pnum">${p}</span><span class="pn" id="pn${p}"></span></button>`).join("")}</div>
+    <div class="label r2-outl">Outputs</div><div class="outs"><div class="o" id="so0"><i></i>Out 1</div><div class="o" id="so1"><i></i>Out 2</div></div><div class="snake">Snake ⇄ FOH</div>`;
+  st.appendChild(sb);
+  const o=document.createElement("div");o.className="r2-outs";
+  [["w0","Wedge 1","In front of Vocal 1"],["w1","Wedge 2","In front of Vocal 2"]].forEach(([id,nm,sbt],w)=>{
+    o.insertAdjacentHTML("beforeend",`<div class="sitem r2-out" id="si-${id}"><div class="nm"><span class="r2-ic">${ICON.wdg}</span><span>${nm}</span></div><div class="sb">${sbt} · fed by Out ${w+1}</div><div class="r2-orow"><button class="chip" data-wpow="${w}"></button><div class="wk" id="wk${w}"></div></div></div>`);});
+  o.insertAdjacentHTML("beforeend",`<div class="sitem r2-out" id="si-pa"><div class="nm"><span class="r2-ic">${ICON.spk}</span><span>Main PA</span></div><div class="sb">L/R speakers, fed from the desk at FOH</div><div class="r2-orow"><button class="chip" data-mpow="1"></button></div></div>`);
+  st.appendChild(o);
+  [0,1].forEach(w=>{const kn=knob({label:"Level",min:-30,max:10,step:1,def:0,get:()=>S.wedge[w].lvl,set:v=>S.wedge[w].lvl=v,fmt:v=>(v>0?"+":"")+v+" dB"});$("#wk"+w).appendChild(kn);knobs.push(kn)});
 }
 function renderStageState(){
   KEYS.forEach(k=>{const p=S.src[k].port,el=$("#pt-"+k);if(!el)return;el.textContent=p?"Input "+p:"Unplugged";el.className="chip"+(p?"":" off");
     $("#si-"+k).classList.toggle("picked",pick===k);const pl=$("#si-"+k+" .plug");pl.classList.toggle("unplugged",!p);
     const ci=S.ch.findIndex((c,i)=>chSrc(i)===k),sig=$("#sg-"+k);if(sig)sig.classList.toggle("on",ci>=0&&alive(ci))});
-  ["v1","v2"].forEach(k=>{const m=$("#msw-"+k),p=$("#pl-"+k);if(!m)return;const on=S.src[k].sw!==false;m.textContent=on?"Mic switch: on":"Mic switch: off";m.className="chip"+(on?"":" off");
-    const pl=S.src[k].place;p.textContent={good:"Placement: close",far:"Placement: too far",off:"Placement: off-axis"}[pl];p.className="chip"+(pl==="good"?"":" pk")});
+  ["v1","v2"].forEach(k=>{const m=$("#msw-"+k),p=$("#pl-"+k);if(!m)return;const on=S.src[k].sw!==false;m.textContent=on?"Mic: on":"Mic: off";m.title="The switch on the mic itself";m.className="chip"+(on?"":" off");
+    const pl=S.src[k].place;p.textContent={good:"Placed: close",far:"Placed: too far",off:"Placed: off-axis"}[pl];p.title="Mic placement. Tap to change it.";p.className="chip"+(pl==="good"?"":" pk")});
   const lf=$("#lift");if(lf){lf.className="chip"+(S.lift?" on":"");lf.textContent=S.lift?"Ground lift: on":"Ground lift"}
   for(let p=1;p<=8;p++){const k=srcAt(p),po=$("#po"+p);if(!po)continue;po.classList.toggle("used",!!k);po.classList.toggle("target",!!pick);$("#pn"+p).textContent=k?SRC[k].nm:"—"}
   document.querySelectorAll("[data-wpow]").forEach(b=>{const w=+b.dataset.wpow;b.textContent=S.wedge[w].on?"Amp on":"Amp off";b.className="chip "+(S.wedge[w].on?"on":"off")});
@@ -4045,13 +4138,21 @@ function renderStageState(){
 }
 function drawCables(){
   const st=$("#rg-stage"),svg=$("#rg-cables");if(!st||st.offsetParent===null)return;const R=st.getBoundingClientRect();
-  const c=el=>{const r=el.getBoundingClientRect();return [r.left-R.left+r.width/2,r.top-R.top+r.height/2]};
+  const box=st.querySelector(".r2-box").getBoundingClientRect(),srcs=st.querySelector(".r2-srcs").getBoundingClientRect();
+  
+  const pt=el=>{const r=el.getBoundingClientRect();return [r.left-R.left+r.width/2,r.top-R.top+r.height/2,r]};
+  const laneL=srcs.right-R.left+6,laneW=Math.max(20,box.left-srcs.right-12),n=KEYS.length;
   let h="";
-  KEYS.forEach(k=>{const p=S.src[k].port;if(!p)return;const a=c($("#si-"+k+" .plug")),b=c($("#po"+p+" .jack"));const mx=(a[0]+b[0])/2;
-    const ci=S.ch.findIndex((x,i)=>chSrc(i)===k);
-    h+=`<path class="cab${ci>=0&&alive(ci)?" live":""}${pick===k?" pick":""}" d="M${a[0]} ${a[1]} C${mx} ${a[1]+30} ${mx} ${b[1]} ${b[0]} ${b[1]}"/>`});
-  const outs=st.querySelectorAll(".outs .o i");[0,1].forEach(w=>{const a=c(outs[w]),b=c($("#si-w"+w));const r=$("#si-w"+w).getBoundingClientRect();const bx=b[0]+r.width/2-4;
-    h+=`<path class="cab out" d="M${a[0]} ${a[1]} C${a[0]-60} ${a[1]+40} ${bx+80} ${b[1]} ${bx} ${b[1]}"/>`});
+  KEYS.forEach((k,idx)=>{const p=S.src[k].port;const pl=$("#si-"+k+" .plug");if(!pl)return;const [ax,ay]=pt(pl);
+    const ci=S.ch.findIndex((x,i)=>chSrc(i)===k),cls=`cab${ci>=0&&alive(ci)?" live":""}${pick===k?" pick":""}${S.src[k].broken?" broken":""}`;
+    if(!p){h+=`<path class="${cls} loose" d="M${ax} ${ay} l0 14 l10 6"/>`;return}
+    const [bx,by]=pt($("#po"+p+" .jack"));
+    const card=$("#si-"+k).getBoundingClientRect(),gy=card.bottom-R.top+6+(idx%3)*5; // run along the gap under the card's row
+    const lx=laneL+(n-1-idx)*(laneW/(n+1))+laneW/(n+1)/2;
+    h+=`<path class="${cls}" d="M${ax} ${ay} V${gy} H${lx} V${by} H${bx}"/>`});
+  [0,1].forEach(w=>{const [ox,oy]=pt($("#so"+w+" i")),wd=$("#si-w"+w).getBoundingClientRect(),tx=wd.left-R.left+wd.width/2,ty=wd.top-R.top-2;
+    const lx=laneL+laneW*0.15+w*8;
+    h+=`<path class="cab out" d="M${ox} ${oy} H${lx} V${ty-10-w*6} H${tx} V${ty}"/>`});
   svg.innerHTML=h;
 }
 $("#rg-stage").addEventListener("click",e=>{
@@ -4174,7 +4275,7 @@ function renderConsoleState(){
     ["p48","pad","hpf","mute","pfl","lr"].forEach(b=>document.querySelector(`[data-b="${b}"][data-i="${i}"]`).classList.toggle("on",!!c[b]));
     const f=document.querySelector(`[data-f="${i}"]`);f.value=c.fader;$("#fv"+i).textContent=fmtDb(fdb(c.fader))});
   $("#rg-mf").value=S.master.fader;$("#rg-mfv").textContent=fmtDb(fdb(S.master.fader))+" dB";$("#rg-mmute").classList.toggle("on",S.master.mute);
-  knobs.forEach(k=>k._draw&&k._draw());staticMeters();renderProc();
+  knobs.forEach(k=>k._draw&&k._draw());staticMeters();renderProc();if(typeof renderPath==="function")renderPath();
 }
 $("#rg-console").addEventListener("click",e=>{const b=e.target.closest("[data-b]");if(b){const i=+b.dataset.i,k=b.dataset.b;
     if(k==="p48"&&srcAt(S.ch[i].input)&&liveCh(i))doPop("p48",i,!S.ch[i].p48);
@@ -4334,7 +4435,7 @@ function pickFaults(n){for(let tries=0;tries<40;tries++){const pool=FAULTS.slice
 function newSession(same,spec){
   if(spec===undefined&&same&&sess)spec=sess.spec;
   const faults=spec?spec.faults.map(id=>FAULTS.find(f=>f.id===id)).filter(Boolean):(same&&sess?sess.faults:pickFaults(DIFF[diff].n));
-  sess={faults,diff:spec?"custom":diff,spec:spec||null,t0:Date.now(),changes:0,pops:0,hints:0,revealed:false,done:false,hintStep:0,hintLog:[]};
+  sess={faults,diff:spec?"custom":diff,spec:spec||null,t0:Date.now(),changes:0,pops:0,hints:0,revealed:false,done:false,hintStep:0,hintLog:[],probes:0,probed:new Set()};
   S=healthy();faults.forEach(f=>f.set(S));listen="mains";syncListen();renderTask();apply();
 }
 function finish(){sess.done=true;sess.time=Math.round((Date.now()-sess.t0)/1000);
@@ -4349,7 +4450,10 @@ const mmss=s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
 function objHTML(){return objectives().map(o=>`<div class="obj${objOK(o)?" ok":""}${o.bonus?" bonus":""}"><div class="ol"><span>${objOK(o)?"✓":"○"} ${o.l}${o.bonus?' <span class="tagb">bonus</span>':""}</span><span class="mono">${o.pct}%</span></div><div class="ob"><i style="width:${o.pct}%"></i></div></div>`).join("")}
 function renderTask(){
   const t=$("#rg-task");
-  if(mode==="free"){t.className="rig-task";t.innerHTML=`<h3>Free play</h3><p>Nothing is broken. The board is set for a normal show. Press <b>Sound on</b>, then try anything: change gains, build monitor mixes, re-patch cables, and switch listening positions to hear what changes. Mute a channel before changing its cable or 48V, or the speakers will pop.</p><div class="row"><button class="btn primary" data-open="1">Choose an activity</button><button class="btn" data-il="1">Input list</button></div>`;return}
+  if(mode==="free"){t.className="rig-task";const best=Math.max(stats.easy[1],stats.medium[1],stats.hard[1]);t.innerHTML=`<div class="r2-start"><div><div class="label">Rig simulator</div><h3>What do you want to do?</h3><p class="note" style="margin:0">A band on stage, a 6-channel desk, two wedges and a PA. Right now it's in <b>free play</b>: nothing is broken. Press <b>Sound on</b> and try anything, but mute a channel before you re-patch it or switch 48V, or the speakers will pop.</p></div>
+    <div class="r2-cards"><button class="r2-card" data-r2="lesson"><b>Lessons</b><span>${LESSONS.length} guided lessons, from line check to effects. Steps tick off as you go.</span></button>
+    <button class="r2-card" data-open="1"><b>Practice: fix faults</b><span>Something is broken. Trace the signal, find it and fix it against the clock.${best?` Your best: ${best}/100.`:""}</span></button>
+    <button class="r2-card on" data-r2="free"><b>Free play</b><span>You're here. Explore the stage, desk and signal path with nothing broken.</span></button></div></div>`;return}
   if(mode==="lesson"){t.className="rig-task";
     t.innerHTML=`<div class="case-bar"><div><div class="label">Lesson</div><h3>${lesson.t}</h3></div><select id="rg-lsel" aria-label="Choose lesson" style="width:auto">${LESSONS.map(l=>`<option value="${l.id}" ${l===lesson?"selected":""}>${l.t}</option>`).join("")}</select></div>
      <p class="note" style="margin-top:0">${lesson.d}</p><ol class="steps" id="rg-steps">${lesson.steps.map((s,j)=>`<li class="${j<step?"done":j===step?"now":"later"}"><span>${fill(s[0])}</span></li>`).join("")}</ol>
@@ -4366,12 +4470,12 @@ function renderTask(){
        <p class="note" style="margin-top:4px">Fixed ${s.faults.length} fault${s.faults.length>1?"s":""} in ${mmss(s.time)} with ${s.changes} changes.</p></div>
      <div class="tcol"><div class="label">What was wrong</div><ul class="dbf">${s.faults.map(f=>`<li>${fill(f.why)}</li>`).join("")}</ul></div>
      <div class="tcol"><div class="label">Your session</div><ul class="dbf">
-       <li>Pops: <b>${s.pops}</b>${s.pops?" (−10 each)":" ✓"}</li><li>Hints: <b>${s.hints}</b>${s.hints?" (−5 each)":""}</li>${s.revealed?"<li>Answer revealed (−30)</li>":""}
+       <li>Points probed: <b>${s.probes||0}</b> on the signal path</li><li>Pops: <b>${s.pops}</b>${s.pops?" (−10 each)":" ✓"}</li><li>Hints: <b>${s.hints}</b>${s.hints?" (−5 each)":""}</li>${s.revealed?"<li>Answer revealed (−30)</li>":""}
        <li>${s.patched?"Stage matched the input list ✓":"Stage doesn't match the input list: tidy it up before the show"}</li></ul></div>
      <div class="tcol"><div class="label">Next</div>${s.spec&&s.spec.note?`<p class="hint" style="border-color:var(--route)"><b>From your trainer:</b> ${esc(s.spec.note)}</p>`:""}<div class="row" style="margin-top:4px">${s.spec&&s.spec.back?`<button class="btn primary" id="rg-back">${esc(s.spec.back.label)}</button>`:`<button class="btn primary" id="rg-again">${s.spec?"Run again":"New session"}</button>`}<button class="btn" id="rg-copy">Copy result</button></div>
        <textarea id="rg-copytxt" class="copybox" hidden readonly></textarea><p class="note" id="rg-copyfb"></p></div></div>`;
     const ag=$("#rg-again");if(ag)ag.onclick=()=>newSession(!!s.spec);const bk=$("#rg-back");if(bk)bk.onclick=()=>{location.hash=s.spec.back.view;show(s.spec.back.view);window.scrollTo({top:0})};
-    $("#rg-copy").onclick=()=>{const txt=`Signal Path Trainer · Rig simulator · ${D.l}\n`+(s.spec?`Session: ${s.spec.name||"Custom"}\n`:"")+`Result: ${grade} (${s.score}/100)\nTime ${mmss(s.time)} · ${s.changes} changes · ${s.hints} hints · ${s.pops} pops${s.revealed?" · answer revealed":""}\nFaults:\n`+s.faults.map(f=>"- "+fill(f.why)).join("\n");
+    $("#rg-copy").onclick=()=>{const txt=`Signal Path Trainer · Rig simulator · ${D.l}\n`+(s.spec?`Session: ${s.spec.name||"Custom"}\n`:"")+`Result: ${grade} (${s.score}/100)\nTime ${mmss(s.time)} · ${s.changes} changes · ${s.probes||0} probes · ${s.hints} hints · ${s.pops} pops${s.revealed?" · answer revealed":""}\nFaults:\n`+s.faults.map(f=>"- "+fill(f.why)).join("\n");
       const ta=$("#rg-copytxt");ta.value=txt;const fb=()=>{ta.hidden=false;ta.select();$("#rg-copyfb").textContent="Selected: press Ctrl+C / ⌘C to copy."};
       try{navigator.clipboard.writeText(txt).then(()=>{$("#rg-copyfb").textContent="Copied. Paste it into a message to your trainer."},fb)}catch(e){fb()}};
     return}
@@ -4379,7 +4483,7 @@ function renderTask(){
   const GEN="Something is wrong with the sound. Find what's broken and fix it, without popping the speakers.";
   const sym=s.spec?(s.spec.symMode==="own"&&s.spec.symptom?esc(s.spec.symptom):s.spec.symMode==="generic"?GEN:s.faults.map(f=>fill(f.c)).join("<br>")):s.diff==="hard"?"Something is wrong with the sound. Find what's broken and fix it, without popping the speakers.":s.faults.map(f=>fill(f.c)).join("<br>");
   t.innerHTML=`<div class="tgrid">
-    <div class="tcol sym"><div class="label">Symptom · ${D.l} <span class="badge">In progress</span></div>${s.spec&&s.spec.brief?`<p class="note" style="margin:0">${esc(s.spec.brief)}</p>`:""}<p class="symp">${sym}</p><p class="note mono" id="rg-clock">Time ${mmss(sec)} · Changes ${s.changes} · Pops ${s.pops}</p></div>
+    <div class="tcol sym"><div class="label">Symptom · ${D.l} <span class="badge">In progress</span></div>${s.spec&&s.spec.brief?`<p class="note" style="margin:0">${esc(s.spec.brief)}</p>`:""}<p class="symp">${sym}</p><p class="note mono" id="rg-clock">Time ${mmss(sec)} · Changes ${s.changes} · Probes ${s.probes} · Pops ${s.pops}</p></div>
     <div class="tcol"><div class="label">Objectives</div><div class="objs" id="rg-objs">${objHTML()}</div></div>
     <div class="tcol"><div class="label">Hint</div><div id="rg-hints">${s.hintLog.map(h=>`<p class="hint">${h}</p>`).join("")||'<p class="note" style="margin:0">Try it yourself first. Hints are added one step at a time and noted in your debrief.</p>'}</div>
       ${s.spec&&s.spec.hints===false?'<p class="note" style="margin:0">Hints are switched off for this session.</p>':`<div class="row"><button class="btn" id="rg-hint">${s.hintLog.length?"Another hint":"Need a hint?"}</button><button class="btn" id="rg-give">Show the answer</button></div>`}</div>
@@ -4392,7 +4496,8 @@ function renderTask(){
   if($("#rg-give"))$("#rg-give").onclick=()=>{s.revealed=true;s.hintLog.push("<b>Answer:</b> "+open.map(f=>fill(f.why)).join(" "));renderTask()};
   $("#rg-restart").onclick=()=>newSession(true);const sk=$("#rg-skip");if(sk)sk.onclick=()=>newSession();
 }
-$("#rg-task").addEventListener("click",e=>{if(e.target.closest("[data-open]"))openPicker();if(e.target.closest("[data-il]"))toggleIL()});
+$("#rg-task").addEventListener("click",e=>{if(e.target.closest("[data-open]"))openPicker();if(e.target.closest("[data-il]"))toggleIL();const r=e.target.closest("[data-r2]");if(r)setMode(r.dataset.r2)});
+$("#rg-ilbtn").addEventListener("click",()=>toggleIL());
 
 /* ---- input list popover ---- */
 function toggleIL(){const p=$("#rg-il");if(!p.hidden){p.hidden=true;return}
@@ -4431,7 +4536,7 @@ setInterval(()=>{
   }
   if(mode==="practice"&&sess&&!sess.done&&!$("#v-desk").hidden){
     const ob=$("#rg-objs");if(ob)ob.innerHTML=objHTML();
-    const ck=$("#rg-clock");if(ck)ck.textContent=`Time ${mmss(Math.round((Date.now()-sess.t0)/1000))} · Changes ${sess.changes} · Pops ${sess.pops}`;
+    const ck=$("#rg-clock");if(ck)ck.textContent=`Time ${mmss(Math.round((Date.now()-sess.t0)/1000))} · Changes ${sess.changes} · Probes ${sess.probes} · Pops ${sess.pops}`;
     if(sess.faults.every(f=>f.ok())&&objectives().filter(o=>o.req).every(objOK))finish();
   }
 },300);
@@ -4441,9 +4546,88 @@ let pickerShown=false;
 window.RIG={faults:()=>FAULTS.map(f=>({id:f.id,g:f.g,c:fill(f.c),why:fill(f.why)})),
   run(spec){pickerShown=true;$("#rg-pick").hidden=true;mode="practice";lesson=null;document.querySelectorAll("#rg-mode button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.m==="practice"));
     location.hash="desk";show("desk");newSession(false,spec);window.scrollTo({top:0})}};
-const _enter=onShow.desk.enter;onShow.desk.enter=()=>{_enter();if(!pickerShown){pickerShown=true;openPicker()}};
-const _leave=onShow.desk.leave;onShow.desk.leave=()=>{_leave();$("#rg-pick").hidden=true;$("#rg-pop").hidden=true};
+const _enter=onShow.desk.enter;onShow.desk.enter=()=>{_enter();document.documentElement.classList.add("rig-wide");setTimeout(drawCables,60)};
+const _leave=onShow.desk.leave;onShow.desk.leave=()=>{_leave();$("#rg-pick").hidden=true;$("#rg-pop").hidden=true;document.documentElement.classList.remove("rig-wide");document.body.classList.remove("rig-focus");const f=$("#rg-focus");if(f){f.setAttribute("aria-pressed",false);f.textContent="⤢ Focus"}};
 
+/* ---------- signal path tracer (v2) ---------- */
+let pathCh=0;
+const H0=healthy();
+const dbs=v=>v===-Infinity?"—":(v>0?"+":"")+v.toFixed(0)+" dB";
+const isMicK=k=>k==="v1"||k==="v2"||k==="kick";
+// Build the chain for channel i. Each node: {id,t,v,st:"ok|warn|bad|off",why,act}
+function pathFor(i){
+  const k=KEYS[i],s=S.src[k],c=S.ch[i],at=srcAt(c.input),out={main:[],br:[]};let live=true;
+  const N=(id,t,st,v,why,act)=>{const n={id,t,st:live?st:"dead",v:live?v:"No signal",why,act};if(live&&st==="bad")live=false;return n};
+  out.main.push(N("src",SRC[k].nm,s.place==="good"?"ok":"warn",s.place==="good"?"Playing":s.place==="far"?"Mic too far away":"Mic pointing off-axis",s.place!=="good"?"A badly placed mic picks up less of the source and more of everything else.":"","si-"+k));
+  out.main.push(N("mic",isMicK(k)?"Mic":(k==="play"?"Laptop → DI":"DI box"),s.sw===false?"bad":"ok",s.sw===false?"Switched off":"Output OK",s.sw===false?"The switch on the mic itself is off.":"","si-"+k));
+  out.main.push(N("cab","Cable",s.broken||!s.port?"bad":"ok",s.broken?"Faulty: nothing comes out":!s.port?"Not plugged in":"Carrying signal",s.broken?"Swap in a known-good cable (mute first).":!s.port?"Plug it into its stagebox input.":"","si-"+k));
+  out.main.push(N("sbx","Stagebox",!s.port?"bad":s.port===i+1?"ok":"warn",s.port?"Input "+s.port:"Empty",s.port&&s.port!==i+1?`The input list says input ${i+1}.`:"","po"+(s.port||i+1)));
+  out.main.push(N("in","Input patch",at===k?"ok":"bad",`Ch ${i+1} ← In ${c.input||"—"}`,at===k?"":at?`Channel ${i+1} is listening to ${SRC[at].nm}, not ${SRC[k].nm}.`:`Nothing is plugged into input ${c.input||"—"}.`,"rg-console"));
+  {const need=SRC[k].ph,pk=chPeak(i);let st="ok",v=dbs(pk)+"FS",why="";
+    if(need&&!c.p48){st="bad";v="No signal";why=`${SRC[k].nm} needs 48V phantom power and it's off.`}
+    else if(pk>-0.5){st="warn";v="Clipping";why="Gain is too high: the converter is overloading, so it distorts everywhere."}
+    else if(pk<-22){st="warn";v=dbs(pk)+"FS · low";why="Gain is too low: the signal is close to the noise floor."}
+    if(k==="keys"&&S.hum&&!S.lift)why=(why?why+" ":"")+"A steady hum is riding on the signal (ground loop).";
+    out.main.push(N("pre","Preamp",st,`${v}${need?" · 48V "+(c.p48?"on":"off"):""}`,why,"rg-console"))}
+  {const bits=[];if(c.hpf)bits.push("HPF on");const e=c.eq;if(e.on&&(e.lo||e.mg||e.hi))bits.push(`EQ ${[e.lo?`low ${e.lo>0?"+":""}${e.lo}`:"",e.mg?`${e.mg>0?"+":""}${e.mg} @ ${e.mf>=1000?(e.mf/1000).toFixed(1)+"k":e.mf}`:"",e.hi?`high ${e.hi>0?"+":""}${e.hi}`:""].filter(Boolean).join(", ")}`);const gr=grOf(i);if(c.comp.on)bits.push(`Comp −${gr.toFixed(0)} dB`);
+    let st="ok",why="";if(k==="kick"&&c.hpf){st="warn";why="A high-pass filter on the kick removes the low end that gives it weight."}
+    if(e.on&&Math.max(Math.abs(e.lo),Math.abs(e.mg),Math.abs(e.hi))>=10){st="warn";why="A very big EQ move: check it by switching the EQ out."}
+    if(gr>10){st="warn";why="The compressor is working very hard (more than 10 dB of gain reduction)."}
+    out.main.push(N("proc","Processing",st,bits.join(" · ")||"Flat",why,"rg-proc"))}
+  {const fd=fdb(c.fader);out.main.push(N("fad","Mute & fader",c.mute||fd<=-40?"bad":"ok",c.mute?"Muted":fd<=-40?"Fader down":"Fader "+fmtDb(fd),c.mute?"The channel is muted, so it feeds nothing.":fd<=-40?"The fader is all the way down.":"","rg-console"))}
+  const after=live;
+  const branch=(lab,nodes)=>{live=after;const r=[];nodes.forEach(f=>r.push(f()));out.br.push({lab,nodes:r})};
+  branch("Main PA",[()=>N("lr",L().main+" assign",c.lr?"ok":"bad",c.lr?"Assigned":"Not assigned",c.lr?"":`Channel ${i+1} isn't routed to ${L().main}.`,"rg-console"),
+    ()=>{const m=fdb(S.master.fader);return N("mst",L().mm,S.master.mute||m<=-40?"bad":"ok",S.master.mute?"Muted":m<=-40?"Fader down":"Fader "+fmtDb(m),S.master.mute?"The main mix is muted.":"","rg-console")},
+    ()=>N("amp","Amps",S.mains.on?"ok":"bad",S.mains.on?"On":"Off",S.mains.on?"":"The main amps are switched off.","si-pa"),
+    ()=>N("pa","PA speakers","ok","Sound in the room","","si-pa")]);
+  [0,1].forEach(w=>{const exp=H0.ch[i].a[w]>-40;
+    branch("Wedge "+(w+1),[()=>{const a=c.a[w];return N("as"+w,`${L().aux} ${w+1} send`,a<=-40?(exp?"bad":"off"):"ok",a<=-40?(exp?"Send down":"Not in this mix"):dbs(a),a<=-40&&exp?`This channel should be in Wedge ${w+1} but its send is down.`:"","rg-console")},
+      ()=>N("am"+w,`${L().aux} ${w+1} master`,S.aux[w].m<=-40?"bad":"ok",S.aux[w].m<=-40?"Down":dbs(S.aux[w].m),S.aux[w].m<=-40?`The ${L().aux} ${w+1} master is all the way down.`:"","rg-console"),
+      ()=>N("wa"+w,"Wedge amp",S.wedge[w].on?"ok":"bad",S.wedge[w].on?"On":"Off",S.wedge[w].on?"":`Wedge ${w+1}'s amp is switched off.`,"si-w"+w),
+      ()=>{const fb=i===w&&margin(w)>0;return N("wd"+w,"Wedge "+(w+1),fb?"warn":"ok",fb?"Ringing":"Sound on stage",fb?"The loop gain is above 1: this wedge is feeding back.":"","si-w"+w)}])});
+  {const F=S.fx,f0=H0.ch[i].fx[0]>-40,f1=H0.ch[i].fx[1]>-40;
+    branch("Effects",[()=>{const a=c.fx[0];return N("f0","Reverb send",a<=-40?(f0?"bad":"off"):"ok",a<=-40?(f0?"Send down":"Not used"):dbs(a),a<=-40&&f0?"This channel normally feeds the reverb.":"","rg-proc")},
+      ()=>N("f0r","Reverb return",!F[0].lr||F[0].mute?"bad":(F[0].decay>3||F[0].ret>3)?"warn":"ok",!F[0].lr?"Not in "+L().main:F[0].mute?"Muted":`${F[0].decay} s · ${dbs(F[0].ret)}`,!F[0].lr?"The reverb return isn't assigned to the main mix.":(F[0].decay>3||F[0].ret>3)?"Very long or very loud reverb washes out the mix.":"","rg-fx"),
+      ()=>N("f1r","Delay",F[1].fb>60?"warn":"ok",`${F[1].time} ms · feedback ${F[1].fb}%`,F[1].fb>60?"Feedback this high makes the repeats build up and run away.":"","rg-fx")])}
+  return out;
+}
+function pathNodeHTML(n,practice){
+  const hidden=practice&&sess&&!sess.done&&!sess.probed.has(pathCh+":"+n.id);
+  // in practice, probing shows what a meter would (signal / level), not the diagnosis, and only dead/alive colours
+  const st=hidden?"unk":practice?(n.st==="bad"||n.st==="dead"?"dead":n.st==="off"?"off":"ok"):n.st;
+  const why=!practice&&n.why&&(n.st==="warn"||n.st==="bad")?`<span class="r2-nw">${n.why}</span>`:"";
+  return `<button class="r2-node ${st}" data-node="${n.id}" data-act="${n.act||""}" aria-label="${n.t}: ${hidden?"not probed yet":n.v}"><span class="r2-nt">${n.t}</span><span class="r2-nv">${hidden?"? Probe":practice&&n.st==="bad"?"No signal past here":n.v}</span>${why}</button>`}
+function renderPath(){
+  const el=$("#rg-path");if(!el)return;const practice=mode==="practice";
+  if(!$("#rg-path-ch").childElementCount)$("#rg-path-ch").innerHTML=KEYS.map((k,i)=>`<button data-pc="${i}" aria-pressed="${i===pathCh}">${i+1}</button>`).join("");
+  $("#rg-path-ch").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.pc===pathCh));
+  $("#rg-path-h").textContent=`Channel ${pathCh+1} · ${NAMES[pathCh]}`;
+  const nt=practice&&sess&&!sess.done?`Tap a point to <b>probe</b> it: you'll see the signal there and hear it in your headphones. Work along the chain to find where the signal stops. Probes used: <b class="mono">${sess.probes}</b>`:
+    "Follow the signal from the source to every place it should end up. Tap any point to listen there. Red is where it stops; amber is a problem worth checking.";
+  if($("#rg-path-note")._h!==nt){$("#rg-path-note")._h=nt;$("#rg-path-note").innerHTML=nt}
+  const P=pathFor(pathCh),arrow='<span class="r2-arr" aria-hidden="true">→</span>';
+  const html=`<div class="r2-chain">${P.main.map(n=>pathNodeHTML(n,practice)).join(arrow)}</div><div class="r2-brs">${P.br.map(b=>`<div class="r2-br"><span class="r2-bl">${b.lab}</span><div class="r2-chain">${b.nodes.map(n=>pathNodeHTML(n,practice)).join(arrow)}</div></div>`).join("")}</div>`;
+  if(html!==el._h){el._h=html;el.innerHTML=html}
+}
+function probe(id,act){
+  if(mode==="practice"&&sess&&!sess.done){const key=pathCh+":"+id;if(!sess.probed.has(key)){sess.probed.add(key);sess.probes++}}
+  // listen where we probed: before the fader = headphones on this channel; outputs = that output
+  const pre=["src","mic","cab","sbx","in","pre","proc","fad","f0"].includes(id);
+  if(pre){S.ch.forEach((c,j)=>c.pfl=j===pathCh);listen="pfl"}else if(/^(as|am|wa|wd)1/.test(id))listen="w1";else if(/^(as|am|wa|wd)0/.test(id))listen="w0";else listen="mains";
+  syncListen();if(id==="proc"||id==="f0"){selCh=pathCh}
+  const t=act&&document.getElementById(act);if(t){t.classList.remove("r2-flash");void t.offsetWidth;t.classList.add("r2-flash")}
+  apply();
+}
+$("#rg-path").addEventListener("click",e=>{const b=e.target.closest("[data-node]");if(b)probe(b.dataset.node,b.dataset.act)});
+$("#rg-path-ch").addEventListener("click",e=>{const b=e.target.closest("[data-pc]");if(!b)return;pathCh=+b.dataset.pc;renderPath()});
+setInterval(()=>{if(!$("#v-desk").hidden&&soundOn)renderPath()},700);
+/* ---------- sections, focus and phone panes ---------- */
+$("#rg-tabs").addEventListener("click",e=>{const b=e.target.closest("[data-pane]");if(!b)return;$("#rg-grid").dataset.pane=b.dataset.pane;$("#rg-tabs").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));setTimeout(drawCables,30)});
+$("#rg-focus").onclick=()=>{const on=!document.body.classList.contains("rig-focus");document.body.classList.toggle("rig-focus",on);$("#rg-focus").setAttribute("aria-pressed",on);$("#rg-focus").textContent=on?"⤡ Exit focus":"⤢ Focus";setTimeout(drawCables,60);window.scrollTo({top:0})};
+new ResizeObserver(()=>{if(!$("#v-desk").hidden)drawCables()}).observe($("#rg-stage"));
+
+$("#rg-console").addEventListener("click",e=>{const b=e.target.closest("[data-sel]");if(b){pathCh=+b.dataset.sel;renderPath()}});
 renderStage();renderConsole();buildProc();renderTask();apply();
 })();
 
