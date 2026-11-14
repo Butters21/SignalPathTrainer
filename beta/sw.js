@@ -1,5 +1,5 @@
 /* Signal Path Trainer service worker. VERSION changes on every build so installed copies update. */
-const VERSION="20261114-1123";
+const VERSION="20261114-1211";
 const CACHE="spt-beta-"+VERSION;
 const CORE=["./","./index.html","./manifest.webmanifest","../icons/icon-180.png","../icons/icon-192.png","../icons/icon-512.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()))});

@@ -493,6 +493,14 @@ body.rig-focus .wrap{max-width:none;padding-top:8px}
   .r2-tools{margin-left:0}.r2-spl .note{display:none}
 }
 
+.dnt-calc{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:grid;gap:8px;align-content:start}.dnt-calc h3{margin:0}
+.dnt-dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 12px;margin:0}.dnt-dl dt{font-weight:700}.dnt-dl dd{margin:0;color:var(--muted)}
+@media(max-width:600px){.dnt-dl{grid-template-columns:1fr}.dnt-dl dd{margin-bottom:6px}}
+.dnt-chk{display:flex;gap:8px;align-items:center;font-size:.9rem}
+.dnt-box{fill:var(--panel2);stroke:var(--line)}.dnt-sw.p{fill:color-mix(in srgb,#6fb3ff 18%,var(--panel2));stroke:#6fb3ff}.dnt-sw.s{fill:color-mix(in srgb,#f0a43a 18%,var(--panel2));stroke:#f0a43a}
+.dnt-t{font-size:12px;fill:var(--fg);text-anchor:middle}.dnt-x{font-size:10px;fill:#ff8a82;text-anchor:middle}
+.dnt-l{fill:none;stroke-width:2.5}.dnt-l.p{stroke:#6fb3ff}.dnt-l.s{stroke:#f0a43a;stroke-dasharray:5 4}
+#sn-ip,#sn-ip2{width:100%}
 .desk-note{margin-top:14px;background:color-mix(in srgb,var(--route) 10%,var(--panel2));border:1px solid color-mix(in srgb,var(--route) 45%,var(--line));border-radius:4px;padding:10px 12px;font-size:.88rem}
 .desk-note .label{color:var(--route);margin-bottom:4px}
 .desk-note dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;margin:0}
@@ -1119,7 +1127,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
 
 <nav aria-label="Sections">
   <div class="primary"><button class="pnav" data-g="home" aria-current="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/></svg><span>Home</span></button><button class="pnav" data-g="learn" aria-current="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h6a2 2 0 0 1 2 2V20a1.8 1.8 0 0 0-1.8-1.8H4z"/><path d="M20 5.5h-6a2 2 0 0 0-2 2V20a1.8 1.8 0 0 1 1.8-1.8H20z"/></svg><span>Learn</span></button><button class="pnav" data-g="practice" aria-current="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4v16M12 4v16M18 4v16"/><rect x="4" y="13" width="4" height="3" rx="1"/><rect x="10" y="7" width="4" height="3" rx="1"/><rect x="16" y="11" width="4" height="3" rx="1"/></svg><span>Practice</span></button><button class="pnav" data-g="control" aria-current="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="7" height="6" rx="1"/><rect x="14" y="14" width="7" height="6" rx="1"/><path d="M6.5 10v4.5a2 2 0 0 0 2 2H14M17.5 14V9.5a2 2 0 0 0-2-2H10"/></svg><span>Show control</span></button><button class="pnav" data-g="ref" aria-current="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h9l3 3V20.5H6z"/><path d="M9 10h6M9 13.5h6M9 17h4"/></svg><span>Reference</span></button></div>
-  <div class="tabs" role="tablist"><div class="tgroup" data-g="learn" role="presentation"><button class="tab" role="tab" data-v="flow"><span class="led"></span>Signal flow</button><button class="tab" role="tab" data-v="gain"><span class="led"></span>Gain structure</button><button class="tab" role="tab" data-v="eq"><span class="led"></span>EQ</button><button class="tab" role="tab" data-v="dyn"><span class="led"></span>Dynamics</button><button class="tab" role="tab" data-v="routing"><span class="led"></span>Buses &amp; plugins</button><button class="tab" role="tab" data-v="mix"><span class="led"></span>Mixing a band</button><button class="tab" role="tab" data-v="mics"><span class="led"></span>Microphones</button><button class="tab" role="tab" data-v="mon"><span class="led"></span>Monitors</button><button class="tab" role="tab" data-v="patch"><span class="led"></span>Patching</button><button class="tab" role="tab" data-v="sys"><span class="led"></span>System</button><button class="tab" role="tab" data-v="cables"><span class="led"></span>Cables</button><button class="tab" role="tab" data-v="safety"><span class="led"></span>Safety</button></div><div class="tgroup" data-g="practice" role="presentation"><button class="tab" role="tab" data-v="desk"><span class="led"></span>Rig simulator</button><button class="tab" role="tab" data-v="bigdesk"><span class="led"></span>16-ch desk</button><button class="tab" role="tab" data-v="hear"><span class="led"></span>Hear it</button><button class="tab" role="tab" data-v="faults"><span class="led"></span>Fault finding</button><button class="tab" role="tab" data-v="quiz"><span class="led"></span>Quizzes</button><button class="tab" role="tab" data-v="showday"><span class="led"></span>Show day</button><button class="tab" role="tab" data-v="teach"><span class="led"></span>Instructor</button><button class="tab" role="tab" data-v="assess"><span class="led"></span>Assessment</button></div><div class="tgroup" data-g="control" role="presentation"><button class="tab" role="tab" data-v="control"><span class="led"></span>Control &amp; network</button><button class="tab" role="tab" data-v="net"><span class="led"></span>Network course</button><button class="tab" role="tab" data-v="dante"><span class="led"></span>Dante lab</button></div><div class="tgroup" data-g="ref" role="presentation"><button class="tab" role="tab" data-v="glossary"><span class="led"></span>Glossary</button><button class="tab" role="tab" data-v="skills"><span class="led"></span>Skills logbook</button></div></div>
+  <div class="tabs" role="tablist"><div class="tgroup" data-g="learn" role="presentation"><button class="tab" role="tab" data-v="flow"><span class="led"></span>Signal flow</button><button class="tab" role="tab" data-v="gain"><span class="led"></span>Gain structure</button><button class="tab" role="tab" data-v="eq"><span class="led"></span>EQ</button><button class="tab" role="tab" data-v="dyn"><span class="led"></span>Dynamics</button><button class="tab" role="tab" data-v="routing"><span class="led"></span>Buses &amp; plugins</button><button class="tab" role="tab" data-v="mix"><span class="led"></span>Mixing a band</button><button class="tab" role="tab" data-v="mics"><span class="led"></span>Microphones</button><button class="tab" role="tab" data-v="mon"><span class="led"></span>Monitors</button><button class="tab" role="tab" data-v="patch"><span class="led"></span>Patching</button><button class="tab" role="tab" data-v="sys"><span class="led"></span>System</button><button class="tab" role="tab" data-v="cables"><span class="led"></span>Cables</button><button class="tab" role="tab" data-v="safety"><span class="led"></span>Safety</button></div><div class="tgroup" data-g="practice" role="presentation"><button class="tab" role="tab" data-v="desk"><span class="led"></span>Rig simulator</button><button class="tab" role="tab" data-v="bigdesk"><span class="led"></span>16-ch desk</button><button class="tab" role="tab" data-v="hear"><span class="led"></span>Hear it</button><button class="tab" role="tab" data-v="faults"><span class="led"></span>Fault finding</button><button class="tab" role="tab" data-v="quiz"><span class="led"></span>Quizzes</button><button class="tab" role="tab" data-v="showday"><span class="led"></span>Show day</button><button class="tab" role="tab" data-v="teach"><span class="led"></span>Instructor</button><button class="tab" role="tab" data-v="assess"><span class="led"></span>Assessment</button></div><div class="tgroup" data-g="control" role="presentation"><button class="tab" role="tab" data-v="control"><span class="led"></span>Control &amp; network</button><button class="tab" role="tab" data-v="net"><span class="led"></span>Network course</button><button class="tab" role="tab" data-v="ntk"><span class="led"></span>Network toolkit</button><button class="tab" role="tab" data-v="dnt"><span class="led"></span>Dante essentials</button><button class="tab" role="tab" data-v="dante"><span class="led"></span>Dante lab</button></div><div class="tgroup" data-g="ref" role="presentation"><button class="tab" role="tab" data-v="glossary"><span class="led"></span>Glossary</button><button class="tab" role="tab" data-v="skills"><span class="led"></span>Skills logbook</button></div></div>
 
 </nav>
 
@@ -1174,6 +1182,8 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
       <ul class="glist">
         <li><button data-go="control"><b>Control &amp; network</b><span>QLab, Companion, Stream Deck, SMPTE</span></button></li>
         <li><button data-go="net"><b>Network course</b><span>Follows <i>Introduction to Show Networking</i></span></button></li>
+         <li><button data-go="ntk"><b>Network toolkit</b><span>Subnets, switches, VLANs, PoE, lighting networks</span></button></li>
+         <li><button data-go="dnt"><b>Dante essentials</b><span>Flows, clocking, latency, redundancy, switch settings</span></button></li>
          <li><button data-go="dante"><b>Dante lab</b><span>Route, name and clock a networked system</span></button></li>
       </ul></article>
     <article class="gcard g-ref"><div class="gh"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h9l3 3V20.5H6z"/><path d="M9 10h6M9 13.5h6M9 17h4"/></svg><div><h2>Reference</h2><p>Look things up quickly.</p></div></div>
@@ -2900,6 +2910,297 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;border-top:1px solid v
     <div class="note-card"><b>Why it matters.</b> A show stop is usually for safety. The sound department&#x27;s job is to make the venue quiet and clear, then bring the show back exactly where it left off, only on the stage manager&#x27;s call.</div>
   </div>
 </section>
+<!-- ================= NETWORK TOOLKIT ================= -->
+<section class="view" id="v-ntk" hidden>
+  <p class="intro">The practical side of show networks: working out addresses, choosing and connecting switches, keeping audio, lighting and video apart, powering devices over the cable, and checking it all before doors. Use this alongside the Network course for the theory and Dante essentials for audio.</p>
+  <div class="panel">
+    <div class="label">Addresses</div><h2>IP addresses and subnets</h2>
+    <div class="grid2">
+      <div><p>Every device on a network needs an <b>IP address</b>, like <span class="mono">192.168.1.20</span>. The <b>subnet mask</b> (or prefix, like <span class="mono">/24</span>) says how much of the address names the <i>network</i> and how much names the <i>device</i>. Devices can only talk directly to others on the <b>same subnet</b>; anything else needs a router, which most show networks don't have.</p>
+      <ul><li><span class="mono">/24</span> (255.255.255.0) is the usual show subnet: 254 usable addresses.</li>
+        <li>Two devices with the <b>same address</b> both stop working properly. Keep an IP plan.</li>
+        <li>Private ranges for closed networks: <span class="mono">10.x.x.x</span>, <span class="mono">172.16–31.x.x</span>, <span class="mono">192.168.x.x</span>.</li>
+        <li><span class="mono">169.254.x.x</span> means the device found no DHCP server and gave itself an address.</li></ul></div>
+      <div class="dnt-calc"><h3>Subnet calculator</h3>
+        <div class="sf-calc"><div class="ctl"><label for="sn-ip">IP address</label><input id="sn-ip" class="mono" value="192.168.10.25" inputmode="decimal" autocomplete="off"></div>
+        <div class="ctl"><label for="sn-pf">Prefix / mask</label><select id="sn-pf"></select></div></div>
+        <div class="ctl"><label for="sn-ip2">Can it reach this device?</label><input id="sn-ip2" class="mono" value="192.168.11.40" inputmode="decimal" autocomplete="off"></div>
+        <div class="sf-out" id="sn-out" aria-live="polite"></div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Switches</div><h2>Switches, topology and loops</h2>
+    <div class="grid2">
+      <div><ul>
+        <li>Build a <b>star</b>: a core switch at FOH or in the rack, with each area (stage left, stage right, amp racks, lighting) on its own branch. It's easy to find faults, and one failure only takes out one branch.</li>
+        <li><b>Daisy-chaining</b> switches works for small rigs, but every hop adds latency and a single point of failure.</li>
+        <li><b>Never make a loop</b> (two cables between the same switches, or a ring) unless every switch runs a loop-protection protocol such as <b>Rapid Spanning Tree</b>. An accidental loop floods the network and takes everything down within seconds.</li>
+        <li><b>Managed</b> switches let you set QoS, VLANs, IGMP and EEE. Unmanaged switches are fine for a tiny, single-purpose network, as long as they don't use EEE.</li>
+      </ul></div>
+      <div><h3>Cables and distance</h3><ul>
+        <li>Copper Ethernet (Cat5e, Cat6) reaches <b>100 m</b> per run, including patch leads. Further needs a switch in between, or fibre.</li>
+        <li>Use <b>etherCON</b> or ruggedised connectors and shielded tactical cable for touring; plain office patch leads break.</li>
+        <li><b>Multimode fibre</b> covers hundreds of metres; <b>single-mode</b> covers kilometres. The SFP modules at each end must match the fibre type and each other.</li>
+        <li>Label both ends of every run with what it is and where it goes.</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Switches</div><h2>VLANs: several networks on one switch</h2>
+    <div class="grid2">
+      <div><p>A <b>VLAN</b> splits one physical switch into separate virtual networks. Audio, lighting, video and control can share the same hardware and fibre runs without seeing each other's traffic.</p>
+      <ul><li>An <b>access</b> (untagged) port belongs to one VLAN: plug a device in and it's on that network.</li>
+        <li>A <b>trunk</b> (tagged) port carries several VLANs between switches, each packet labelled with its VLAN number.</li>
+        <li>Keep routing between VLANs off on show networks, and make sure clock and multicast don't leak across.</li></ul></div>
+      <div><h3>Example plan</h3><div class="tblwrap"><table class="sf-t"><thead><tr><th>VLAN</th><th>Use</th><th>Subnet</th></tr></thead><tbody>
+        <tr><td class="mono">10</td><td>Dante primary</td><td class="mono">10.10.10.0/24</td></tr>
+        <tr><td class="mono">11</td><td>Dante secondary (own switches ideally)</td><td class="mono">10.10.11.0/24</td></tr>
+        <tr><td class="mono">20</td><td>Lighting (sACN)</td><td class="mono">10.20.0.0/16</td></tr>
+        <tr><td class="mono">30</td><td>Video</td><td class="mono">10.30.30.0/24</td></tr>
+        <tr><td class="mono">40</td><td>Control: tablets, show control, OSC</td><td class="mono">10.40.40.0/24</td></tr>
+      </tbody></table></div><p class="note">An example only. Agree the plan with every department before load-in.</p></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Switches</div><h2>Multicast and IGMP</h2>
+    <p><b>Unicast</b> goes to one device. <b>Broadcast</b> goes to every device on the subnet. <b>Multicast</b> goes to a group, and devices join the groups they want. Dante multicast flows, AES67 streams and sACN lighting all use it.</p>
+    <ul><li>Without help, a switch treats multicast like broadcast and floods it to every port. A few streams are fine; lots will swamp slow devices and Wi-Fi.</li>
+      <li><b>IGMP snooping</b> makes the switch listen for "I want this group" messages and send each stream only to ports that asked for it.</li>
+      <li>Snooping needs one <b>IGMP querier</b> per network or VLAN, usually the core switch, to keep the group list up to date.</li></ul>
+  </div>
+  <div class="panel">
+    <div class="label">Power</div><h2>Power over Ethernet (PoE)</h2>
+    <p>A PoE switch sends power down the same cable as the data: handy for wireless access points, small Dante interfaces, cameras, intercom panels and some speakers. Every switch has a <b>total PoE budget</b> as well as a per-port limit, and the cable loses some power along the way.</p>
+    <div class="grid2">
+      <div><div class="tblwrap"><table class="sf-t"><thead><tr><th>Standard</th><th>At the switch</th><th>At the device</th></tr></thead><tbody>
+        <tr><td>802.3af (PoE, Type 1)</td><td class="mono">15.4 W</td><td class="mono">12.95 W</td></tr>
+        <tr><td>802.3at (PoE+, Type 2)</td><td class="mono">30 W</td><td class="mono">25.5 W</td></tr>
+        <tr><td>802.3bt (Type 3)</td><td class="mono">60 W</td><td class="mono">51 W</td></tr>
+        <tr><td>802.3bt (Type 4)</td><td class="mono">90 W</td><td class="mono">71.3 W</td></tr>
+      </tbody></table></div></div>
+      <div class="dnt-calc"><h3>PoE budget</h3>
+        <div class="ctl"><label for="pe-bud">Switch PoE budget (W)</label><input type="number" id="pe-bud" value="240" min="0" step="10"></div>
+        <div class="ld-items" id="pe-items"></div>
+        <div class="sf-out" id="pe-out" aria-live="polite"></div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Other departments</div><h2>Lighting networks: Art-Net and sACN</h2>
+    <p>Lighting desks send DMX <b>universes</b> (512 channels each) over the network to nodes and fixtures. Sound techs often share switches with lighting, so it helps to know what's on the wire.</p>
+    <div class="tblwrap"><table class="sf-t"><thead><tr><th></th><th>Art-Net</th><th>sACN (E1.31)</th></tr></thead><tbody>
+      <tr><td>How it's sent</td><td>Unicast to nodes that ask; broadcast as a fallback</td><td>Multicast by default: one group per universe (239.255.0.1 = universe 1)</td></tr>
+      <tr><td>Universe numbering</td><td>Starts at 0</td><td>Starts at 1</td></tr>
+      <tr><td>Priority / backup desk</td><td>No built-in priority</td><td>Priority 0–200 per universe: a backup desk takes over automatically</td></tr>
+      <tr><td>Switch needs</td><td>Works on simple switches</td><td>IGMP snooping + querier on big systems</td></tr>
+      <tr><td>Good for</td><td>RDM over the network, simple rigs</td><td>Large rigs, tracking backups, shared networks</td></tr>
+    </tbody></table></div>
+    <p class="note">Watch the numbering: "universe 1" can mean different things in Art-Net and sACN gear.</p>
+  </div>
+  <div class="panel">
+    <div class="label">Choosing</div><h2>Which audio transport?</h2>
+    <div class="tblwrap"><table class="sf-t"><thead><tr><th>System</th><th>What it is</th><th>Strengths</th><th>Watch out for</th></tr></thead><tbody>
+      <tr><td>Analogue multicore</td><td>One copper pair per channel</td><td>Simple, no setup, no clocking</td><td>Heavy, hum and noise over long runs, fixed channel count</td></tr>
+      <tr><td>MADI</td><td>Up to 64 channels on one coax or fibre, point to point</td><td>Very reliable, simple, long fibre runs</td><td>One link per pair of devices; no routing on the cable itself</td></tr>
+      <tr><td>Dante</td><td>Audio over standard Ethernet with routing in software</td><td>Huge device choice, flexible routing, redundancy</td><td>Needs correct switch settings, naming and clock care</td></tr>
+      <tr><td>AES67 / ST 2110-30</td><td>Open standard audio over IP</td><td>Links different brands and broadcast systems</td><td>Multicast only; more manual setup</td></tr>
+      <tr><td>AVB / Milan</td><td>Audio network with timing built into the switches</td><td>Guaranteed bandwidth and timing</td><td>Needs AVB-capable switches; doesn't talk to Dante directly</td></tr>
+      <tr><td>Proprietary console links</td><td>The console maker's own stagebox protocol</td><td>Plug and play with that brand</td><td>Only works within that brand's family</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="panel">
+    <div class="label">Show day</div><h2>Network check before doors</h2>
+    <ul class="sd-list">
+      <li><label><input type="checkbox"><span>Every switch powered from a protected supply (UPS or a separate circuit from lighting dimmers)</span></label></li>
+      <li><label><input type="checkbox"><span>Link lights checked on every run; no amber (100 Mb) links where gigabit is expected</span></label></li>
+      <li><label><input type="checkbox"><span>No loops: count the cables between each pair of switches</span></label></li>
+      <li><label><input type="checkbox"><span>Dante Controller: one leader clock, every device locked, no subscription errors</span></label></li>
+      <li><label><input type="checkbox"><span>Redundant systems: primary and secondary both green, on separate switches</span></label></li>
+      <li><label><input type="checkbox"><span>IP plan and device names written down and taped inside the rack</span></label></li>
+      <li><label><input type="checkbox"><span>Spare switch, power supply, SFPs and tested cables within reach</span></label></li>
+      <li><label><input type="checkbox"><span>Show preset saved and backed up off the computer</span></label></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= DANTE ESSENTIALS ================= -->
+<section class="view" id="v-dnt" hidden>
+  <p class="intro">Dante carries many channels of audio over an ordinary Ethernet network instead of a copper multicore. A stagebox, a desk, a recorder and an amp rack all plug into network switches, and you route audio between them in software called Dante Controller. This page covers what you need to set one up and keep it running on a show: flows, clocking, latency, bandwidth, redundancy, addressing, switch settings, AES67, and what to check when it goes wrong. Then practise it in the Dante lab.</p>
+  <div class="panel">
+    <div class="label">Basics</div><h2>How Dante thinks</h2>
+    <div class="grid2">
+      <div><ul>
+        <li><b>Devices</b> are anything with a Dante port: stageboxes, desk cards, amps, processors, wireless receivers, a laptop running Dante Virtual Soundcard.</li>
+        <li>Each device has <b>transmit channels</b> (audio it puts on the network) and <b>receive channels</b> (audio it can take in).</li>
+        <li>A <b>subscription</b> connects one transmit channel to one receive channel. In Dante Controller it's a tick in the routing grid: the receiver "subscribes" to the transmitter.</li>
+        <li>Subscriptions are stored by <b>device name and channel name</b>, not by cable or port. Rename a device and every subscription to it breaks; plug it into a different switch port and nothing changes.</li>
+        <li>Routing lives in the devices themselves. Dante Controller is only the remote control: close it and the audio keeps flowing.</li>
+      </ul></div>
+      <div><h3>Words you'll see</h3><dl class="dnt-dl">
+        <dt>Dante Controller</dt><dd>Free software for routing, naming, clock and latency settings, and monitoring.</dd>
+        <dt>Dante Virtual Soundcard</dt><dd>Software that turns a computer into a Dante device for recording and playback.</dd>
+        <dt>Dante Via</dt><dd>Software that puts a computer's own audio apps and USB devices onto the Dante network.</dd>
+        <dt>Flow</dt><dd>The bundle of packets that carries channels from one device to another (below).</dd>
+        <dt>Leader clock</dt><dd>The one device every other device takes its timing from.</dd>
+      </dl></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Basics</div><h2>Flows: unicast and multicast</h2>
+    <p>Audio doesn't travel channel by channel. Dante groups channels into <b>flows</b>. A <b>unicast</b> flow goes from one transmitter to one receiver and carries up to <b>4 channels</b>. A <b>multicast</b> flow is sent once and any number of receivers can pick it up; it carries up to <b>8 channels</b> by default. Every device can only handle a limited number of flows. Typical hardware supports around 32 each way, and small adapters as few as two. That limit, not channel count, is often what you hit first.</p>
+    <div class="grid2">
+      <div><ul>
+        <li>Unicast is the default and is best when one receiver wants a channel.</li>
+        <li>When <b>several receivers</b> want the same channels (FOH, monitors, recorder, broadcast), each unicast receiver costs the transmitter more flows. Switching those channels to multicast uses one set of flows for everyone.</li>
+        <li>Multicast reaches every switch port unless your switches use <b>IGMP snooping</b> to send it only where it's wanted. Use it where it helps, not everywhere.</li>
+        <li>If a <b>receiver</b> runs out of flows (single channels from many different devices), multicast won't help. Change the routing instead.</li>
+      </ul></div>
+      <div class="dnt-calc">
+        <h3>Flow counter</h3>
+        <div class="ctl"><label for="fl-ch">Channels each receiver takes from the stagebox <span class="mono" id="fl-ch-v"></span></label><input type="range" id="fl-ch" min="1" max="32" value="16"></div>
+        <div class="ctl"><label for="fl-rx">Receivers taking them (FOH, monitors, recorder…) <span class="mono" id="fl-rx-v"></span></label><input type="range" id="fl-rx" min="1" max="6" value="3"></div>
+        <div class="ctl"><label for="fl-lim">Stagebox flow limit</label><select id="fl-lim"><option value="32">32 transmit flows (typical card)</option><option value="16">16 transmit flows</option><option value="8">8 transmit flows</option><option value="2">2 transmit flows (small adapter)</option></select></div>
+        <div class="seg" role="group" aria-label="Transport" id="fl-mode"><button data-m="uni" aria-pressed="true">Unicast</button><button data-m="multi" aria-pressed="false">Multicast</button></div>
+        <div class="sf-out" id="fl-out" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Timing</div><h2>Clocking</h2>
+    <p>Every Dante device must sample audio at exactly the same moment, or you get clicks and dropouts. They stay in step using <b>PTP</b> (Precision Time Protocol): one device is elected <b>leader clock</b> and every other device follows it, kept within about a microsecond.</p>
+    <div class="grid2">
+      <div><ul>
+        <li>The leader is chosen automatically from each device's clock quality and link speed. If it disappears, another takes over within seconds.</li>
+        <li><b>Preferred leader</b>: tick it on the device you want in charge (usually the main desk or a device with a stable word clock). With several ticked, the lowest MAC address wins.</li>
+        <li><b>Sync to external</b>: lets a device follow a house word clock or its host console, then pass that timing on to the network.</li>
+        <li>All devices that exchange audio must use the <b>same sample rate</b>. A mismatched device can't subscribe.</li>
+      </ul></div>
+      <div><h3>Clock warning signs</h3><ul>
+        <li><b>Two or more leaders</b> in Dante Controller: usually a network loop, or clock packets leaking between VLANs that should be separate.</li>
+        <li><b>"Clock instability" or ticking</b>: often Energy Efficient Ethernet (EEE) on a switch, an overloaded 100 Mb link, or a switch without proper QoS.</li>
+        <li><b>A device stuck "unlocked"</b>: check its sample rate and whether it's set to sync to an external clock that isn't there.</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Timing</div><h2>Latency: how much buffer to allow</h2>
+    <p>Each receiver waits a fixed time before playing audio, so packets that took longer through the network still arrive in time. Lower latency is quicker but leaves less margin. The usual default of <b>1 ms</b> works on large networks. Small all-gigabit systems can go lower. Two rules are easy to forget: a device on a <b>100 Mb link needs at least 1 ms</b> or its subscriptions fail, and receivers using the <b>same latency from the same transmitter</b> stay sample-aligned.</p>
+    <div class="dnt-calc" style="max-width:620px">
+      <h3>Latency picker</h3>
+      <div class="ctl"><label for="lt-hops">Switches between the furthest two devices <span class="mono" id="lt-hops-v"></span></label><input type="range" id="lt-hops" min="1" max="12" value="3"></div>
+      <div class="ctl"><label for="lt-link">Slowest link on the path</label><select id="lt-link"><option value="1000">Gigabit everywhere</option><option value="100">At least one 100 Mb device or link</option></select></div>
+      <label class="dnt-chk"><input type="checkbox" id="lt-soft"> A computer running Dante Virtual Soundcard is in the path</label>
+      <div class="sf-out" id="lt-out" aria-live="polite"></div>
+    </div>
+    <p class="note">Based on Audinate's published guide values (0.15 ms for one switch up to 5 ms for very large networks). Always start from the value Dante Controller recommends for your devices.</p>
+  </div>
+  <div class="panel">
+    <div class="label">Network</div><h2>Bandwidth: will it fit?</h2>
+    <p>Audinate's rule of thumb at 48 kHz/24-bit: a <b>gigabit</b> link carries up to about <b>512 channels each way</b>; a <b>100 Mb</b> link about <b>48 each way</b>, and anything over 32×32 should be on gigabit. Keep any link at or below about <b>70% full</b>. A link only runs as fast as its slowest end.</p>
+    <div class="dnt-calc" style="max-width:620px">
+      <h3>Link estimate</h3>
+      <div class="ctl"><label for="bw-ch">Channels in the busiest direction on this link <span class="mono" id="bw-ch-v"></span></label><input type="range" id="bw-ch" min="2" max="512" step="2" value="64"></div>
+      <div class="sf-calc">
+        <div class="ctl"><label for="bw-sr">Sample rate</label><select id="bw-sr"><option value="48">48 kHz</option><option value="96">96 kHz</option><option value="44.1">44.1 kHz</option></select></div>
+        <div class="ctl"><label for="bw-bit">Bit depth</label><select id="bw-bit"><option value="24">24-bit</option><option value="32">32-bit</option><option value="16">16-bit</option></select></div>
+        <div class="ctl"><label for="bw-link">Link speed</label><select id="bw-link"><option value="1000">1 Gb</option><option value="100">100 Mb</option></select></div>
+      </div>
+      <div class="sf-out" id="bw-out" aria-live="polite"></div>
+    </div>
+    <p class="note">This scales Audinate's published channel counts. It's a planning estimate, not a measurement. Check real use in Dante Controller.</p>
+  </div>
+  <div class="panel">
+    <div class="label">Network</div><h2>Redundancy: primary and secondary</h2>
+    <div class="grid2">
+      <div><p>Many Dante devices have two ports. With <b>redundancy</b>, the device sends every packet on both its primary and its secondary port at the same time, onto two completely separate networks. If a cable, switch or power supply fails on one, the audio carries on over the other with no gap.</p>
+      <ul><li>Primary and secondary must be <b>two separate networks</b>: separate switches (best) or separate VLANs. <b>Never link them together.</b></li>
+        <li>The secondary port is not for daisy-chaining to the next device.</li>
+        <li>Both ports must run at the same speed.</li>
+        <li>Run Dante Controller on the <b>primary</b> network.</li>
+        <li>Devices with only one port join the primary network only.</li></ul></div>
+      <div><svg class="dg" viewBox="0 0 360 220" role="img" aria-label="Two devices each connected to a primary switch and a separate secondary switch">
+        <rect x="20" y="20" width="110" height="44" rx="6" class="dnt-box"/><text x="75" y="47" class="dnt-t">Stagebox</text>
+        <rect x="230" y="20" width="110" height="44" rx="6" class="dnt-box"/><text x="285" y="47" class="dnt-t">FOH desk</text>
+        <rect x="120" y="110" width="120" height="34" rx="6" class="dnt-sw p"/><text x="180" y="132" class="dnt-t">Primary switch</text>
+        <rect x="120" y="170" width="120" height="34" rx="6" class="dnt-sw s"/><text x="180" y="192" class="dnt-t">Secondary switch</text>
+        <path d="M60 64 V127 H120 M300 64 V127 H240" class="dnt-l p"/><path d="M90 64 V187 H120 M270 64 V187 H240" class="dnt-l s"/>
+        <text x="180" y="160" class="dnt-x">never cable these two together</text></svg></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Network</div><h2>Addresses and names</h2>
+    <div class="grid2">
+      <div><ul>
+        <li>Out of the box, Dante devices find an address on their own. With a <b>DHCP server</b> on the network they take one from it. Without one they pick a <b>link-local</b> address: <span class="mono">169.254.x.x</span> on primary and <span class="mono">172.31.x.x</span> on secondary.</li>
+        <li><b>Static addresses</b> are only worth it when the design needs them (a shared network, control systems that address devices directly). Keep a record, and keep every device on the same subnet.</li>
+        <li>A device given a static address on a different subnet appears in Dante Controller but can't route audio with the others.</li>
+      </ul></div>
+      <div><ul>
+        <li><b>Device names must be unique</b>. Name them by job and position: <span class="mono">SB-STAGE-L</span>, <span class="mono">FOH-DESK</span>, <span class="mono">AMP-RACK-1</span>.</li>
+        <li><b>Name channels</b> on the transmitter ("Kick", "Vox 1"): those labels follow the audio into every receiver.</li>
+        <li>Replacing a broken box? Give the new one the <b>same name</b> and the old subscriptions come back by themselves.</li>
+        <li>Save a <b>preset</b> of the whole system before the show so you can recall it after a swap or a reset.</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Network</div><h2>Switch settings that matter</h2>
+    <p>Dante runs on standard managed Ethernet switches, but a few settings make the difference between solid and glitchy. Dante marks its packets with priority values (<b>DSCP</b>), and the switch must be set to trust them.</p>
+    <div class="tblwrap"><table class="sf-t"><thead><tr><th>Traffic</th><th>Priority</th><th>DSCP</th></tr></thead><tbody>
+      <tr><td>Clock (time-critical PTP)</td><td>Highest</td><td class="mono">CS7 · 56</td></tr>
+      <tr><td>Audio and other PTP</td><td>High</td><td class="mono">EF · 46</td></tr>
+      <tr><td>Reserved</td><td>Low</td><td class="mono">CS1 · 8</td></tr>
+      <tr><td>Everything else</td><td>None</td><td class="mono">Best effort · 0</td></tr>
+    </tbody></table></div>
+    <div class="grid2"><ul>
+      <li><b>QoS on</b>, trusting DSCP, with strict priority and at least 4 queues.</li>
+      <li><b>Energy Efficient Ethernet (EEE, "green Ethernet") off</b> on every port carrying Dante. It is the classic cause of clock problems.</li>
+      <li><b>Gigabit</b> between switches.</li></ul><ul>
+      <li><b>IGMP snooping</b> with a <b>querier</b> if you use multicast, so it doesn't flood every port. If problems start after enabling it, test with it off.</li>
+      <li><b>No Wi-Fi</b> in the audio path.</li>
+      <li>A dedicated network, or a VLAN of its own, for large channel counts. If you use VLANs, keep Dante's clock from leaking between them.</li></ul></div>
+  </div>
+  <div class="panel">
+    <div class="label">Beyond Dante</div><h2>AES67, ST 2110 and other brands</h2>
+    <div class="grid2">
+      <div><p><b>AES67</b> is an open standard for audio over IP that many brands support (Ravenna, Livewire+, Q-SYS and others). Dante devices that support it can send and receive AES67 streams alongside normal Dante audio. <b>SMPTE ST 2110-30</b> is the broadcast version of the same idea.</p>
+      <ul><li>Turn on AES67 mode for the device in Dante Controller, then create a <b>multicast</b> AES67 flow. These streams are always multicast and use addresses in the <span class="mono">239.x.x.x</span> range.</li>
+        <li>Other brands find the stream from its announcement (SAP/SDP). Some need it entered by hand.</li>
+        <li>Dante devices talk to each other with normal Dante flows, not AES67.</li></ul></div>
+      <div><h3>Not the same thing</h3><ul>
+        <li><b>AVB / Milan</b> is a different audio network family (used by some speaker and console brands). It needs AVB-capable switches and doesn't pass audio to Dante directly. A bridge or a device with both is needed.</li>
+        <li><b>MADI</b> is point-to-point digital audio on coax or fibre, not a network: one cable, up to 64 channels, no switches.</li>
+        <li>Lighting (Art-Net, sACN) and control (OSC) can share switches with Dante if QoS is right, but many shows keep them on separate networks or VLANs.</li></ul></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="label">Beyond Dante</div><h2>Managing bigger systems</h2>
+    <p>On a one-off gig, Dante Controller is enough. Permanent venues, campuses and touring systems often add a management layer that controls who can change what and lets Dante cross between subnets.</p>
+    <div class="tblwrap"><table class="sf-t"><thead><tr><th></th><th>Dante Domain Manager</th><th>Dante Director</th></tr></thead><tbody>
+      <tr><td>Runs</td><td>On your own server (on-premise)</td><td>In the cloud, managed remotely</td></tr>
+      <tr><td>Groups devices</td><td>Into domains (limited number per licence)</td><td>Into sites, as many as needed</td></tr>
+      <tr><td>Users and roles</td><td>Detailed roles (site, domain, media, read-only), LDAP</td><td>Simpler admin and site roles</td></tr>
+      <tr><td>Across subnets/VLANs</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Event log</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Best for</td><td>Venues with their own IT team and offline needs</td><td>Many sites managed from one place</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="panel">
+    <div class="label">Fix it</div><h2>Dante troubleshooting</h2>
+    <div class="tblwrap"><table class="sf-t"><thead><tr><th>What you see</th><th>Likely cause</th><th>What to do</th></tr></thead><tbody>
+      <tr><td>Device missing from Dante Controller</td><td>Controller on the wrong network or secondary port; device on another subnet; cable or switch port dead</td><td>Put the computer on the primary network; check the device's IP in Device Info; check link lights.</td></tr>
+      <tr><td>Subscription shows an error after a box was swapped</td><td>The replacement has a different device name</td><td>Rename it to the old name, or re-route to the new name.</td></tr>
+      <tr><td>Can't subscribe: sample rate</td><td>Devices set to different sample rates</td><td>Set every device in the system to the same rate.</td></tr>
+      <tr><td>Subscription error on one device only</td><td>Latency below 1 ms on a 100 Mb device</td><td>Raise that device's latency to 1 ms or more, or move it to a gigabit port.</td></tr>
+      <tr><td>New receivers won't subscribe; error mentions flows</td><td>Transmitter out of unicast flows</td><td>Make the shared channels multicast.</td></tr>
+      <tr><td>Clicks and short dropouts on every device</td><td>EEE on a switch; no QoS; overloaded link</td><td>Turn EEE off, enable DSCP QoS, check link use is under 70%.</td></tr>
+      <tr><td>More than one leader clock shown</td><td>Network loop, or clock leaking between VLANs</td><td>Find the loop (two cables between the same switches); isolate the VLANs.</td></tr>
+      <tr><td>Whole network slows when multicast is on</td><td>Multicast flooding every port</td><td>Enable IGMP snooping and a querier.</td></tr>
+      <tr><td>Secondary network warnings on most devices</td><td>Secondary cabling missing or joined to the primary</td><td>Give secondary its own switch; never bridge the two.</td></tr>
+    </tbody></table></div>
+    <div class="row" style="margin-top:10px"><button class="btn primary" data-go="dante">Practise in the Dante lab →</button></div>
+  </div>
+</section>
+
 <!-- ================= DANTE LAB ================= -->
 <section class="view" id="v-dante" hidden>
   <div class="panel" id="dl-root"></div>
@@ -2965,11 +3266,11 @@ function renderCmp(){
 onConsole.push(renderCmp); renderCmp();
 
 /* ---------- routing between tabs ---------- */
-const views=["home","mics","flow","gain","hear","desk","bigdesk","showday","routing","mon","patch","sys","cables","safety","eq","dyn","mix","control","net","dante","faults","teach","assess","quiz","glossary","skills"];
+const views=["home","mics","flow","gain","hear","desk","bigdesk","showday","routing","mon","patch","sys","cables","safety","eq","dyn","mix","control","net","ntk","dnt","dante","faults","teach","assess","quiz","glossary","skills"];
 let curView=null;
-const GROUPS={learn:["flow","gain","eq","dyn","routing","mix","mics","mon","patch","sys","cables","safety"],practice:["desk","bigdesk","hear","faults","quiz","showday","teach","assess"],control:["control","net","dante"],ref:["glossary","skills"]};
+const GROUPS={learn:["flow","gain","eq","dyn","routing","mix","mics","mon","patch","sys","cables","safety"],practice:["desk","bigdesk","hear","faults","quiz","showday","teach","assess"],control:["control","net","ntk","dnt","dante"],ref:["glossary","skills"]};
 const groupOf=v=>v==="home"?"home":Object.keys(GROUPS).find(g=>GROUPS[g].includes(v))||"home";
-const NAMES_V={flow:"Signal flow",gain:"Gain structure",routing:"Buses & plugins",mics:"Microphones",mon:"Monitors",patch:"Patching",sys:"System",cables:"Cables",safety:"Safety",eq:"EQ",dyn:"Dynamics",mix:"Mixing a band",desk:"Rig simulator",bigdesk:"16-channel desk",hear:"Hear it",faults:"Fault finding",quiz:"Quizzes",showday:"Show day",teach:"Instructor",assess:"Assessment",control:"Control & network",net:"Network course",dante:"Dante lab",glossary:"Glossary",skills:"Skills logbook"};
+const NAMES_V={flow:"Signal flow",gain:"Gain structure",routing:"Buses & plugins",mics:"Microphones",mon:"Monitors",patch:"Patching",sys:"System",cables:"Cables",safety:"Safety",eq:"EQ",dyn:"Dynamics",mix:"Mixing a band",desk:"Rig simulator",bigdesk:"16-channel desk",hear:"Hear it",faults:"Fault finding",quiz:"Quizzes",showday:"Show day",teach:"Instructor",assess:"Assessment",control:"Control & network",net:"Network course",ntk:"Network toolkit",dnt:"Dante essentials",dante:"Dante lab",glossary:"Glossary",skills:"Skills logbook"};
 window.SUBGO={};window.SUBNOW={};
 function go(v){const [b]=String(v).split("/");if(location.hash.slice(1)!==v&&location.hash.slice(1).split("/")[0]!==v)location.hash=v;show(v);window.scrollTo({top:0});
   const h=document.querySelector("#v-"+b+" .phead h1");if(h&&b!=="home"){h.tabIndex=-1;h.focus({preventScroll:true})}}
@@ -5408,11 +5709,11 @@ onShow.assess={enter:render};render();
    ========================================================= */
 (function(){
 const LEARN=[["flow","Signal flow","10 min"],["gain","Gain structure","10 min"],["eq","EQ","12 min"],["dyn","Dynamics","12 min"],["routing","Buses & plugins","8 min"],["mix","Mixing a band","12 min"],["mics","Microphones","12 min"],["mon","Monitors","10 min"],["patch","Patching","10 min"],["sys","System","12 min"],["cables","Cables","8 min"],["safety","Safety","10 min"]];
-const CTRL=[["control","Control & network","15 min"],["net","Network course","40 min"],["dante","Dante lab","","Practise a networked system the way you would in Dante Controller: subscriptions, names, sample rate, latency, clocking and redundancy. Missions build a show; Find the fault breaks one."]];
+const CTRL=[["control","Control & network","15 min"],["net","Network course","40 min"],["ntk","Network toolkit","20 min"],["dnt","Dante essentials","25 min"],["dante","Dante lab","","Practise a networked system the way you would in Dante Controller: subscriptions, names, sample rate, latency, clocking and redundancy. Missions build a show; Find the fault breaks one."]];
 const PRAC=[["desk","Rig simulator","","A small band on stage and a 6-channel desk. Work through the lessons, then fix faults against the clock."],["bigdesk","16-channel desk","","A bigger desk with groups, DCAs and a matrix. Build the routing a real show uses, then find the faults in a finished show file."],["hear","Hear it",""],["faults","Fault finding","","Written scenarios from real gigs. Read the symptom, follow the signal from the source, and choose the fix."],["quiz","Quizzes","","Test yourself by topic, mix it up, train your ears on EQ, or drill the glossary with flashcards. Questions you get wrong come back sooner."],["showday","Show day",""],["teach","Instructor",""],["assess","Assessment","","A timed test: knowledge questions plus practical rig tasks, ending with a results certificate. The pass mark is 80%."]];
 const REFL=[["glossary","Glossary","","Every term used in the trainer, in plain words. Search by name or abbreviation."],["skills","Skills logbook",""]];
 const LZ=[{z:"Channel & mix",d:"Path, level, tone, mix",c:"blue",items:[{id:"flow",t:"Signal flow"},{id:"gain",t:"Gain structure"},{id:"eq",t:"EQ"},{id:"dyn",t:"Dynamics"},{id:"routing",t:"Buses & plugins"},{id:"mix",t:"Mixing a band"}]},{z:"On stage",d:"Sources and foldback",c:"amber",items:[{id:"mics",t:"Microphones"},{id:"mon",t:"Monitors"}]},{z:"Connect & power",d:"Patch, PA, cables",c:"purple",items:[{id:"patch",t:"Patching"},{id:"sys",t:"System"},{id:"cables",t:"Cables"}]},{z:"Stay safe",d:"Ears and mains",c:"teal",items:[{id:"safety",t:"Safety"}]}];
-const CZ=[{z:"Concepts",d:"Protocols and software",c:"blue",items:[{id:"control",t:"Control & network"}]},{z:"Networks",d:"Learn, then practise",c:"teal",items:[{id:"net",t:"Network course"},{id:"dante",t:"Dante lab"}]}];
+const CZ=[{z:"Concepts",d:"Protocols and software",c:"blue",items:[{id:"control",t:"Control & network"}]},{z:"Networks",d:"Learn, then practise",c:"teal",items:[{id:"net",t:"Network course"},{id:"ntk",t:"Network toolkit"},{id:"dnt",t:"Dante essentials"},{id:"dante",t:"Dante lab"}]}];
 const RZ=[{z:"Look up",d:"Every term",c:"blue",items:[{id:"glossary",t:"Glossary"}]},{z:"Track",d:"Your progress",c:"teal",items:[{id:"skills",t:"Skills logbook"}]}];
 const PZ=[{z:"Hands on",d:"Desks to drive",c:"amber",items:[{id:"desk",t:"Rig simulator"},{id:"bigdesk",t:"16-ch desk"}]},{z:"Ears",d:"Hear the problem",c:"blue",items:[{id:"hear",t:"Hear it"}]},{z:"Diagnose",d:"Follow the signal",c:"purple",items:[{id:"faults",t:"Fault finding"},{id:"quiz",t:"Quizzes"}]},{z:"Show day",d:"The routine",c:"teal",items:[{id:"showday",t:"Show day"}]},{z:"Teach & test",d:"Instructors",c:"grey",items:[{id:"teach",t:"Instructor"},{id:"assess",t:"Assessment"}]}];
 [[LEARN,"Learn","learn"],[CTRL.map(x=>x.length>3?x:[...x,""]),"Show control","control"],[PRAC,"Practice","practice"],[REFL,"Reference","ref"]].forEach(([LIST,LAB,GRP])=>LIST.forEach(([v,t,rt,ld],i)=>{
@@ -5637,6 +5938,14 @@ const SUBNAV={
   {z:"Layout",d:"Where things go",c:"blue",items:[{id:"place",t:"Mic & wedge placement",f:["Mic and wedge placement"]},{id:"stage",t:"Stage plan",f:["A monitor stage, from above"]}]},
   {z:"Systems",d:"What they hear",c:"purple",items:[{id:"iem",t:"Wedges or IEMs",f:["Wedges or in-ear monitors?"]}]},
   {z:"People",d:"Working with the band",c:"teal",items:[{id:"mixes",t:"Mixes & talkback",f:["Typical starting mixes","Talking to the stage"],l:"grid2"}]}],
+ dnt:[{z:"Basics",d:"How Dante works",c:"blue",items:[{id:"how",t:"How Dante thinks",f:["How Dante thinks"]},{id:"flows",t:"Flows",f:["Flows: unicast and multicast"]}]},
+  {z:"Timing",d:"Clock and latency",c:"amber",items:[{id:"clock",t:"Clocking",f:["Clocking"]},{id:"lat",t:"Latency",f:["Latency: how much buffer to allow"]}]},
+  {z:"Network",d:"Build it right",c:"purple",items:[{id:"bw",t:"Bandwidth",f:["Bandwidth: will it fit?"]},{id:"red",t:"Redundancy",f:["Redundancy: primary and secondary"]},{id:"ip",t:"Addresses & names",f:["Addresses and names"]},{id:"sw",t:"Switch settings",f:["Switch settings that matter"]}]},
+  {z:"Beyond",d:"Bigger systems",c:"teal",items:[{id:"aes",t:"AES67 & others",f:["AES67, ST 2110 and other brands"]},{id:"ddm",t:"Managing systems",f:["Managing bigger systems"]},{id:"fix",t:"Troubleshooting",f:["Dante troubleshooting"]}]}],
+ ntk:[{z:"Addresses",d:"IP and subnets",c:"blue",items:[{id:"ip",t:"Subnets",f:["IP addresses and subnets"]}]},
+  {z:"Switches",d:"Build the network",c:"amber",items:[{id:"topo",t:"Topology & loops",f:["Switches, topology and loops"]},{id:"vlan",t:"VLANs",f:["VLANs: several networks on one switch"]},{id:"mc",t:"Multicast & IGMP",f:["Multicast and IGMP"]},{id:"poe",t:"PoE",f:["Power over Ethernet (PoE)"]}]},
+  {z:"Around you",d:"Other systems",c:"purple",items:[{id:"light",t:"Lighting networks",f:["Lighting networks: Art-Net and sACN"]},{id:"which",t:"Audio transports",f:["Which audio transport?"]}]},
+  {z:"Show day",d:"Before doors",c:"teal",items:[{id:"check",t:"Network check",f:["Network check before doors"]}]}],
  eq:[{z:"Basics",d:"Shapes and Q",c:"blue",items:[{id:"shapes",t:"EQ shapes",f:["The EQ shapes on every desk"]}]},
   {z:"Hands on",d:"Hear it",c:"amber",items:[{id:"try",t:"Parametric EQ",f:["Try a parametric EQ"]},{id:"inst",t:"Where instruments live",f:["Where instruments live"]}]},
   {z:"Ears",d:"Sweep and find",c:"purple",items:[{id:"find",t:"Find the problem",f:["Find the problem frequency"]}]},
@@ -6648,6 +6957,24 @@ const QB=[
 {t:"mix",q:"Which should usually stay in the centre?",o:["Lead vocal, kick, snare and bass","Hi-hats and overheads","Keys and backing vocals","Reverb returns"],a:0,e:"They're the core of the mix; everyone in the room needs them."},
 {t:"mix",q:"Between songs the singer talks and it's swimming in reverb. What do you do?",o:["Mute the FX returns (or the vocal sends) while they talk","Turn the vocal off","Add more delay","Turn the main fader down"],a:0,e:"Many engineers put the FX mutes on a button for exactly this."},
 {t:"mix",q:"The mix keeps getting louder through the night. Best habit?",o:["Mix by turning things down, and check the SPL meter","Turn the main fader up to match","Add a limiter and push into it","Ignore it; it's normal"],a:0,e:"Ears tire and creep the level up; meters don't."},
+{t:"dnt",q:"How many channels can one Dante unicast flow carry?",o:["Up to 4","Up to 8","Up to 64","Just 1"],a:0,e:"Unicast flows hold up to 4 channels; multicast flows up to 8 by default."},
+{t:"dnt",q:"FOH, monitors and a recorder all need the same 16 stagebox channels and the stagebox is running out of flows. Best fix?",o:["Make those channels multicast","Lower the latency","Use static IP addresses","Turn off redundancy"],a:0,e:"Multicast sends one set of flows that every receiver shares."},
+{t:"dnt",q:"A replacement stagebox is plugged in, but every subscription to it shows an error. Most likely?",o:["It has a different device name","Its cable is too long","The latency is too high","The switch has QoS on"],a:0,e:"Subscriptions are stored by device and channel name. Give it the old name."},
+{t:"dnt",q:"Which switch feature is the classic cause of Dante clock problems and should be turned off?",o:["Energy Efficient Ethernet (EEE)","QoS","IGMP snooping","Gigabit ports"],a:0,e:"EEE (green Ethernet) puts links to sleep and upsets PTP timing."},
+{t:"dnt",q:"What DSCP value does Dante use for its time-critical clock packets?",o:["CS7 (56)","EF (46)","CS1 (8)","0 (best effort)"],a:0,e:"CS7 56 for time-critical PTP, EF 46 for audio and other PTP."},
+{t:"dnt",q:"A device is on a 100 Mb link. What's the lowest latency it can safely use?",o:["1 ms","0.25 ms","0.15 ms","Any value works"],a:0,e:"Below 1 ms on 100 Mb links gives subscription errors."},
+{t:"dnt",q:"Dante Controller shows two leader clocks. What should you look for first?",o:["A network loop or VLANs leaking into each other","A muted channel","A device set to 48 kHz","A missing preset"],a:0,e:"Two leaders mean the clock domain has split or doubled up."},
+{t:"dnt",q:"With Dante redundancy, how are the secondary ports connected?",o:["To a completely separate network, never joined to the primary","Daisy-chained to the next device","Into the same switch as the primary ports","They are left empty"],a:0,e:"Primary and secondary must be separate networks."},
+{t:"dnt",q:"A Dante device shows an address of 169.254.12.7. What does that tell you?",o:["It found no DHCP server and gave itself a link-local address","It's on the secondary network","It has a static address","It's broken"],a:0,e:"Link-local primary addresses are 169.254.x.x (secondary 172.31.x.x)."},
+{t:"dnt",q:"Roughly how many channels each way fit on a gigabit link at 48 kHz/24-bit?",o:["About 512","About 48","About 64","About 4,000"],a:0,e:"Around 512 on gigabit, 48 on 100 Mb (Audinate's guide figures)."},
+{t:"ntk",q:"Two devices are 192.168.1.20/24 and 192.168.2.20/24. Can they talk directly?",o:["No: different subnets","Yes: same network","Yes, if both use DHCP","Only over Wi-Fi"],a:0,e:"With /24 the third number must match too."},
+{t:"ntk",q:"How far can a copper Ethernet run go before it needs a switch or fibre?",o:["100 m","10 m","500 m","2 km"],a:0,e:"100 m per run, including patch leads."},
+{t:"ntk",q:"Someone plugs two cables between the same two unmanaged switches. What happens?",o:["A loop floods the network and everything stops","Twice the bandwidth","Automatic redundancy","Nothing"],a:0,e:"Loops need Spanning Tree on managed switches; otherwise they take the network down."},
+{t:"ntk",q:"What does IGMP snooping do?",o:["Sends multicast only to ports that asked for it","Encrypts audio","Assigns IP addresses","Blocks broadcast completely"],a:0,e:"Without it, multicast floods like broadcast. It also needs a querier."},
+{t:"ntk",q:"A VLAN trunk port…",o:["Carries several VLANs between switches, tagged","Belongs to one VLAN only","Powers devices","Connects to Wi-Fi"],a:0,e:"Access ports carry one VLAN untagged; trunks carry many, tagged."},
+{t:"ntk",q:"PoE+ (802.3at) provides up to how much at the switch port?",o:["30 W","15.4 W","60 W","90 W"],a:0,e:"af 15.4 W, at 30 W, bt 60 or 90 W at the switch."},
+{t:"ntk",q:"Which lighting protocol has a priority value so a backup desk can take over automatically?",o:["sACN","Art-Net","MIDI","OSC"],a:0,e:"sACN carries priority 0–200 per universe."},
+{t:"ntk",q:"Which is point-to-point and not a network: one cable, up to 64 channels?",o:["MADI","Dante","AES67","AVB"],a:0,e:"MADI runs over coax or fibre between two devices."},
 {t:"safety",q:"Using the NIOSH 3 dB rule, if 85 dBA is safe for 8 hours, how long is safe at 94 dBA?",o:["1 hour","4 hours","2 hours","30 minutes"],a:0,e:"+9 dB is three halvings: 8 → 4 → 2 → 1 hour."},
 {t:"safety",q:"Why is the 3 dB exchange rate used by most hearing specialists?",o:["+3 dB is double the sound energy, so it should get half the time","It's easier to calculate","It's the US legal limit","Because dBA meters round to 3 dB"],a:0,e:"Doubling the energy and halving the time keeps the total dose the same."},
 {t:"safety",q:"A DI or audio connection hums when two pieces of gear are linked. What's the safe fix?",o:["Ground-lift switch on the DI or an audio isolator","Remove the earth pin from the mains plug","Use a two-pin adapter on the amp","Turn the high-pass filter up"],a:0,e:"Break the loop on the audio side. Never defeat the mains safety earth."},
@@ -6679,7 +7006,7 @@ const QB=[
 {t:"control",q:"In Dante, a device set to 'Sync to External' while another is Preferred Leader will…",o:["Lose sync and mute","Become the leader anyway","Work normally","Switch to 96 kHz"],a:0,e:"A device following an external word clock must be the leader or share that clock source."},
 {t:"control",q:"MIDI Program Change is commonly used to…",o:["Recall a scene or preset","Send audio","Carry timecode only","Power devices"],a:0,e:"Many desks recall scenes on Program Change messages."}
 ];
-const QTOP={flow:"Signal flow",gain:"Gain structure",routing:"Buses & plugins",mics:"Microphones",mon:"Monitors",patch:"Patching",sys:"System",cables:"Cables",safety:"Safety",eq:"EQ",dyn:"Dynamics",mix:"Mixing a band",control:"Show control"};
+const QTOP={flow:"Signal flow",gain:"Gain structure",routing:"Buses & plugins",mics:"Microphones",mon:"Monitors",patch:"Patching",sys:"System",cables:"Cables",safety:"Safety",eq:"EQ",dyn:"Dynamics",mix:"Mixing a band",control:"Show control",dnt:"Dante",ntk:"Show networks"};
 
 /* =========================================================
    QUIZZES — hub, topic quizzes, mixed, listening, flashcards, review
@@ -7174,6 +7501,67 @@ $("#dr-ans").addEventListener("click",e=>{const b=e.target.closest("[data-a]");i
 $("#dr-fb").addEventListener("click",e=>{if(e.target.id==="dr-next")next()});
 next();
 const prev=onShow.hear;onShow.hear={enter:()=>{prev&&prev.enter&&prev.enter()},leave:()=>{prev&&prev.leave&&prev.leave();BAND.stop()}};
+})();
+
+/* =========================================================
+   DANTE ESSENTIALS — flow counter, latency picker, bandwidth estimate
+   ========================================================= */
+(function(){
+if(!$("#v-dnt"))return;
+let flMode="uni";
+function flows(){const ch=+$("#fl-ch").value,rx=+$("#fl-rx").value,lim=+$("#fl-lim").value;$("#fl-ch-v").textContent=ch;$("#fl-rx-v").textContent=rx;
+  const uni=rx*Math.ceil(ch/4),mul=Math.ceil(ch/8),used=flMode==="uni"?uni:mul,pc=used/lim*100,c=pc<=75?"ok":pc<=100?"warn":"bad";
+  $("#fl-out").innerHTML=`<div class="sf-row"><span>Flows</span><div class="sf-bar"><i class="${c}" style="width:${Math.min(100,pc)}%"></i></div><span class="mono">${used}/${lim}</span></div>
+   <p>${flMode==="uni"?`Unicast: ${rx} receiver${rx>1?"s":""} × ${Math.ceil(ch/4)} flow${Math.ceil(ch/4)>1?"s":""} (4 channels each) = <b class="mono">${uni}</b> flows from the stagebox.`:`Multicast: ${ch} channels ÷ 8 per flow = <b class="mono">${mul}</b> flow${mul>1?"s":""}, shared by all ${rx} receivers.`}</p>
+   <p class="sf-verdict ${c}">${used>lim?"✗ Not enough flows. The last receivers can't subscribe."+(flMode==="uni"?" Switch these channels to multicast.":" Split the channels across fewer receivers or use a device with more flows."):pc>75?"⚠ Close to the limit. One more receiver may not fit.":"✓ Fits comfortably."}</p>
+   ${flMode==="uni"&&mul<uni?`<p class="note">Multicast would need only ${mul} flow${mul>1?"s":""} for the same job.</p>`:""}`}
+["fl-ch","fl-rx"].forEach(i=>$("#"+i).addEventListener("input",flows));$("#fl-lim").addEventListener("change",flows);
+$("#fl-mode").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;flMode=b.dataset.m;$("#fl-mode").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));flows()});
+flows();
+function lat(){const h=+$("#lt-hops").value,l=+$("#lt-link").value,soft=$("#lt-soft").checked;$("#lt-hops-v").textContent=h+(h===1?" switch":" switches");
+  let r=h<=1?0.15:h<=3?0.25:h<=5?0.5:h<=10?1:2;const notes=[];
+  if(l===100&&r<1){r=1;notes.push("A 100 Mb link needs at least 1 ms, or subscriptions fail.")}
+  if(h<=1&&l===1000)notes.push("0.15 ms only suits fast devices on an all-gigabit network. Many devices' lowest setting is 0.25 ms or more.");
+  if(h>10)notes.push("Very large networks can need up to 5 ms.");
+  if(soft)notes.push("Dante Virtual Soundcard uses its own higher preset latency on the channels it sends. Check them in its settings.");
+  const fmt=v=>v<1?(v*1000)+" µs":v+" ms";
+  $("#lt-out").innerHTML=`<p style="margin:6px 0">Suggested receiver latency: <b class="mono" style="font-size:1.3rem">${fmt(r)}</b>${r!==1?` <span class="note">(default is 1 ms)</span>`:""}</p>${notes.map(n=>`<p class="note" style="margin:4px 0">${n}</p>`).join("")}`}
+["lt-hops"].forEach(i=>$("#"+i).addEventListener("input",lat));["lt-link","lt-soft"].forEach(i=>$("#"+i).addEventListener("change",lat));lat();
+function bw(){const ch=+$("#bw-ch").value,sr=+$("#bw-sr").value,bit=+$("#bw-bit").value,link=+$("#bw-link").value;$("#bw-ch-v").textContent=ch;
+  const base=link===1000?512:48,cap=Math.floor(base*(48/sr)*(24/bit)),pc=ch/cap*100,c=pc<=70?"ok":pc<=100?"warn":"bad";
+  $("#bw-out").innerHTML=`<div class="sf-row"><span>Load</span><div class="sf-bar"><i class="${c}" style="width:${Math.min(100,pc)}%"></i><b style="left:70%"></b></div><span class="mono">${Math.round(pc)}%</span></div>
+   <p>At ${sr} kHz/${bit}-bit a ${link===1000?"gigabit":"100 Mb"} link carries roughly <b class="mono">${cap}</b> channels each way. ${ch} channels is about <b>${Math.round(pc)}%</b> of that. The mark is 70%.</p>
+   <p class="sf-verdict ${c}">${pc>100?"✗ Too many channels for this link."+(link===100?" Use gigabit.":" Split across more links or lower the sample rate."):pc>70?"⚠ Over 70%. It may work, but leave headroom for control traffic and growth.":"✓ Comfortable."}${link===100&&ch>32?" Over 32×32 should be on gigabit anyway.":""}</p>`}
+$("#bw-ch").addEventListener("input",bw);["bw-sr","bw-bit","bw-link"].forEach(i=>$("#"+i).addEventListener("change",bw));bw();
+})();
+
+/* =========================================================
+   NETWORK TOOLKIT — subnet calculator, PoE budget
+   ========================================================= */
+(function(){
+if(!$("#v-ntk"))return;
+const pf=$("#sn-pf");for(let p=8;p<=30;p++){const m=(0xffffffff<<(32-p))>>>0;pf.insertAdjacentHTML("beforeend",`<option value="${p}" ${p===24?"selected":""}>/${p} · ${[24,16,8,0].map(s=>(m>>>s)&255).join(".")}</option>`)}
+const parse=s=>{const p=String(s).trim().split(".");if(p.length!==4)return null;let v=0;for(const x of p){if(!/^\d{1,3}$/.test(x)||+x>255)return null;v=v*256+(+x)}return v>>>0};
+const fmt=v=>[24,16,8,0].map(s=>(v>>>s)&255).join(".");
+function sn(){const ip=parse($("#sn-ip").value),ip2=parse($("#sn-ip2").value),p=+pf.value,out=$("#sn-out");
+  if(ip===null){out.innerHTML='<p class="sf-verdict bad">That isn\'t a valid IPv4 address (four numbers from 0 to 255, separated by dots).</p>';return}
+  const mask=(0xffffffff<<(32-p))>>>0,net=(ip&mask)>>>0,bc=(net|(~mask>>>0))>>>0,hosts=Math.max(0,Math.pow(2,32-p)-2);
+  const priv=(ip>>>24)===10||((ip>>>24)===172&&((ip>>>16)&255)>=16&&((ip>>>16)&255)<=31)||((ip>>>24)===192&&((ip>>>16)&255)===168),ll=(ip>>>16)===((169<<8)|254);
+  let h=`<div class="tblwrap"><table class="sf-t"><tbody><tr><td>Network</td><td class="mono">${fmt(net)}/${p}</td></tr><tr><td>Usable addresses</td><td class="mono">${fmt(net+1)} – ${fmt(bc-1)}</td></tr><tr><td>Devices possible</td><td class="mono">${hosts.toLocaleString()}</td></tr><tr><td>Broadcast</td><td class="mono">${fmt(bc)}</td></tr></tbody></table></div>`;
+  if(ip===net||ip===bc)h+='<p class="sf-verdict warn">⚠ That\'s the network or broadcast address. A device can\'t use it.</p>';
+  else if(ll)h+='<p class="note">169.254.x.x is self-assigned: the device found no DHCP server.</p>';
+  else if(!priv)h+='<p class="note">That\'s not a private range. Closed show networks normally use 10.x, 172.16–31.x or 192.168.x.</p>';
+  if(ip2===null)h+='<p class="note">Enter a second address to check if the two can talk.</p>';
+  else{const same=((ip2&mask)>>>0)===net;h+=`<p class="sf-verdict ${same?"ok":"bad"}">${ip2===ip?"⚠ Same address twice: an IP conflict. Both devices will misbehave.":same?`✓ ${fmt(ip2)} is on the same subnet. They can talk directly.`:`✗ ${fmt(ip2)} is on a different subnet (${fmt((ip2&mask)>>>0)}/${p}). Without a router they can't talk. Change one address or the mask.`}</p>`}
+  out.innerHTML=h}
+["sn-ip","sn-ip2"].forEach(i=>$("#"+i).addEventListener("input",sn));pf.addEventListener("change",sn);sn();
+const ITEMS=[["Wireless access point",15,2],["Small Dante interface (2-ch)",8,4],["PTZ camera",25,1],["Intercom wall panel",12,2],["Tablet charger / small PoE device",6,0],["PoE+ powered speaker",30,0]];
+$("#pe-items").innerHTML=`<div class="ld-row ld-h"><span>Device</span><span>Watts each</span><span>How many</span></div>`+ITEMS.map(([n,w,q],i)=>`<div class="ld-row"><span id="pe-n${i}">${n}</span><input type="number" min="0" step="1" value="${w}" aria-label="Watts for ${n}" data-pw="${i}"><input type="number" min="0" max="48" step="1" value="${q}" aria-label="How many ${n}" data-pq="${i}"></div>`).join("");
+function pe(){const bud=+$("#pe-bud").value||0;let W=0;ITEMS.forEach((_,i)=>{W+=(+$(`[data-pw="${i}"]`).value||0)*(+$(`[data-pq="${i}"]`).value||0)});
+  const pc=bud?W/bud*100:999,c=pc<=80?"ok":pc<=100?"warn":"bad";
+  $("#pe-out").innerHTML=`<div class="sf-row"><span>Budget</span><div class="sf-bar"><i class="${c}" style="width:${Math.min(100,pc)}%"></i><b style="left:80%"></b></div><span class="mono">${Math.round(pc)}%</span></div>
+   <p><b class="mono">${W} W</b> of a <b class="mono">${bud} W</b> budget.</p><p class="sf-verdict ${c}">${pc>100?"✗ Over budget. Some devices won't power up, or the switch will shut ports down. Move devices to another PoE switch or use injectors.":pc>80?"⚠ Close to the limit. Devices draw more when they start up.":"✓ Within budget."}</p><p class="note">Use each device's maximum draw from its spec sheet, and check each port's limit too.</p>`}
+$("#pe-items").addEventListener("input",pe);$("#pe-bud").addEventListener("input",pe);pe();
 })();
 </script>
 
